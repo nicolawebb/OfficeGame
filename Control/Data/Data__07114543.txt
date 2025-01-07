@@ -1,0 +1,28 @@
+Name: Anonymous
+Gender: Male
+Age: ss
+How much do you know about robots and robotics?: 
+Familiar
+Have you come into contact with robots in your daily life?: 
+Often
+
+Question1: 
+3
+Question2: 
+3
+Question3: 
+3
+Question4: 
+3
+Question5: 
+3
+Question6: 
+3
+Question7: 
+3
+Question8: 
+3
+Question9: 
+3
+Question10: 
+3

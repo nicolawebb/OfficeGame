@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/kenney_animated-characters-2/Model/characterMedium/skin.material" type="Material" id=1]
+[ext_resource path="res://assets/kenney_animated-characters-2/Model/.mesh" type="ArrayMesh" id=2]
+[ext_resource path="res://assets/kenney_animated-characters-2/Model/characterMedium.fbx" type="PackedScene" id=3]
+
+[node name="KinematicBody" type="KinematicBody"]
+
+[node name="characterMedium" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Root" type="Spatial" parent="."]
+
+[node name="Skeleton" type="Skeleton" parent="Root"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Root/Skeleton"]
+transform = Transform( 45, 0, 0, 0, -1.96701e-06, 45, 0, -45, -1.96701e-06, 0.00230622, 0.00477219, 0.00075388 )
+mesh = ExtResource( 2 )
+skeleton = NodePath("../..")
+material/0 = ExtResource( 1 )

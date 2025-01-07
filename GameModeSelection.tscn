@@ -1,0 +1,255 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://FredokaOne-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://ParticipantInformation.gd" type="Script" id=2]
+[ext_resource path="res://Times New Roman.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/time_roman_36.tres" type="DynamicFont" id=4]
+[ext_resource path="res://assets/Audio/kenney_interface-sounds/click_002.ogg" type="AudioStream" id=5]
+
+[sub_resource type="DynamicFont" id=15]
+size = 65
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.286275, 0.258824, 0.258824, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="ButtonGroup" id=2]
+
+[sub_resource type="DynamicFont" id=14]
+size = 61
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 47
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=19]
+default_font = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=18]
+size = 23
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 38
+font_data = ExtResource( 3 )
+
+[node name="ParticipantInformation" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Bg" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 705.0
+margin_top = 80.0
+margin_right = 1318.0
+margin_bottom = 153.0
+custom_fonts/font = SubResource( 15 )
+text = "Participant Information"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+margin_left = 424.0
+margin_top = 300.0
+margin_right = 1624.0
+margin_bottom = 740.0
+rect_min_size = Vector2( 1200, 0 )
+custom_constants/line_spacing = 10
+custom_fonts/font = SubResource( 16 )
+text = "1. Somewhere in the city, a fire broke out in a building. As a firefighter, you will enter the building with a new member of your team - a firefighting robot to carry out the firefighting mission. Can you complete the mission successfully?
+ 
+2. Press the 'F' key to use the fire-extinguisher. 
+Press the 'E' key to call for robot help.
+
+3. At some moments, we will ask you how much you trust the robot. You will need to enter a number from 0-10 before you can continue the mission."
+align = 1
+autowrap = true
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 850.0
+margin_bottom = -30.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer"]
+margin_left = 842.0
+margin_top = 85.0
+margin_right = 1206.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 0, 150 )
+
+[node name="SinglePlayerBtn" type="Button" parent="CenterContainer/HBoxContainer"]
+margin_right = 300.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 300, 0 )
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 1 )
+group = SubResource( 2 )
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/HBoxContainer/SinglePlayerBtn"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+
+[node name="SinglePlayerGame" type="VBoxContainer" parent="CenterContainer/HBoxContainer/SinglePlayerBtn/CenterContainer"]
+margin_left = 92.0
+margin_top = 40.0
+margin_right = 207.0
+margin_bottom = 109.0
+mouse_default_cursor_shape = 2
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CenterContainer/HBoxContainer/SinglePlayerBtn/CenterContainer/SinglePlayerGame"]
+margin_right = 115.0
+margin_bottom = 69.0
+custom_fonts/font = SubResource( 14 )
+text = "Start"
+align = 1
+valign = 1
+
+[node name="Control2" type="Control" parent="CenterContainer/HBoxContainer"]
+margin_left = 304.0
+margin_right = 364.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 60, 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 200.0
+margin_top = 253.0
+margin_right = 1900.0
+margin_bottom = 986.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 1688.0
+margin_bottom = 2415.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 30
+
+[node name="Intro" type="Label" parent="ScrollContainer/VBoxContainer2"]
+margin_right = 1688.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+custom_fonts/font = SubResource( 17 )
+text = "Project title: Investigating the effect of explainability in human-robot teaming "
+autowrap = true
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer2"]
+margin_top = 90.0
+margin_right = 1688.0
+margin_bottom = 279.0
+rect_min_size = Vector2( 0, 60 )
+custom_fonts/font = SubResource( 21 )
+text = " We would like to invite you to take part in our research project. Before you decide whether to participate, we would like you to understand why the research is being conducted and what it would involve for you. Talk to others about the study if you wish. Please message the research team through Prolific if anything is unclear.  "
+autowrap = true
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer2"]
+margin_top = 309.0
+margin_right = 1688.0
+margin_bottom = 2336.0
+rect_min_size = Vector2( 0, 60 )
+theme = SubResource( 19 )
+custom_fonts/font = SubResource( 18 )
+text = "What is the purpose of the project?  
+
+The purpose of the project is to investigate how trust is affected during human-robot teaming. Maintaining a good level of trust when working in a team is important for successful completion of tasks. We particularly are looking at the context of the emergency services, where the success of a mission is dependent on the level of cooperation in a team. In particular, we look at scenarios where one or more members of the team are robots. This work is being carried out as part of the HuRST project. 
+
+ Why have I been invited to participate?  
+
+You have been invited to participate as you are above 18 years old and are fluent in English. 
+
+Do I have to take part?  
+
+It is up to you to decide whether you wish to participate in the project. If you agree to take part, then you will be asked to sign a consent form. You are free to withdraw at any time, without giving a reason.  
+
+ All data will be anonymised and no personally identifiable information will be saved.  
+
+ What will happen to me if I take part and what will I have to do?  
+
+You will be playing a 3D game where the scenario sees you as a firefighter who must patrol an office building to put out fires. We will record your in-game activities. No data of your person, i.e. audio or video recordings will be data. 
+
+ What are the possible disadvantages and risks involved in taking part in the project? 
+
+There are no risks or disadvantages to you for taking part. 
+
+What are the possible benefits of taking part?  
+
+Benefits are payment for your time through the Prolific platform. You will be paid £3 for roughly 20 minutes of your time. 
+
+Will my participation in this project be kept confidential?  
+
+We will only collect some basic demographic information and your in-game activity. All information which is collected about you during the course of the study will be kept strictly confidential, and any information about you will have your prolific ID removed so that you cannot be identified. Data will be stored securely on the University of Bristol OneDrive. 
+
+What will happen to the results of the research project? 
+
+Data will be used for academic purposes and conference publications. Only anonymised data will be used. 
+
+ What will happen to my data? 
+
+Your involvement in the study will remain confidential. This information will only be available to research staff and national bodies which monitor whether research studies are conducted properly. Your study data will be anonymised. This means that it will be given an identification number and any identifying information about you will be removed. Therefore, it will not be possible to identify you by name from any aspect of documentation or reporting for this research study. At the end of the study your data will be made “Open Data”. This means that it will be stored in an online database so that it is publicly available. 
+
+What is open Data? 
+
+Open data means that data are made available, free of charge, to anyone interested in the research, or who wishes to conduct their own analysis of the data. We will therefore have no control over how these data are used. However, all data will be anonymised before it is made available and therefore there will be no way to identify you from the research data. 
+
+Why open data? 
+
+Open access to research findings and access to data is considered best research practice and is a requirement of many funding bodies and journals. As a large proportion of research is publicly funded, the outcomes of the research should be made publicly available. Sharing data helps to maximise the impact of investment through wider use and encourages new avenues of research. 
+
+Who is organising and funding the research?  
+
+This work is part of the HuRST project, and EPSRC funded research. 
+
+Who has reviewed the study?  
+
+The University of Bristol Faculty of Engineering Research Ethics Committee have reviewed the project.  
+
+Further information and contact details  
+
+For further information you can contact either Dr Edmund Hunt edmund.hunt@bristol.ac.uk or Nicola Webb nicola.webb@bristol.ac.uk. 
+
+If you have any concerns related to your participation in this study, please contact the universities Research Governance Team: research-governance@bristol.ac.uk"
+autowrap = true
+
+[node name="Consent" type="Button" parent="ScrollContainer/VBoxContainer2"]
+margin_top = 2366.0
+margin_right = 1688.0
+margin_bottom = 2415.0
+custom_fonts/font = SubResource( 20 )
+text = "I give my consent"
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer2/Consent" to="." method="_on_Consent_pressed"]
