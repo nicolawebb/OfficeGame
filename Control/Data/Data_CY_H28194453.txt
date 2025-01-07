@@ -1,0 +1,50 @@
+Name: CY H
+Gender: Female
+Age: 23
+How much do you know about robots and robotics?: 
+Not at all
+Have you come into contact with robots in your daily life?: 
+Seldom
+
+Question1: 
+Trust
+Question2: 
+Positive
+Question3: 
+Positive
+Question4: 
+High
+Question5: 
+Possible
+Question6: 
+Neutral
+Question7: 
+Trust
+Question8: 
+Unnecessary
+Question9: 
+Necessary
+Question10: 
+Neutral
+
+After Game
+Question1: 
+Neutral
+Question2: 
+Average
+Question3: 
+Neutral
+Question4: 
+Neutral
+Question5: 
+Consistent
+Question6: 
+Loyal
+Question7: 
+Neutral
+Question8: 
+Slightly affected
+Question9: 
+Slightly increased
+Question10: 
+Confused

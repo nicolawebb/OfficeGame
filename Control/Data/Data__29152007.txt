@@ -1,0 +1,34 @@
+Name: Anonymous
+Gender: Male
+Age: 18
+How much do you know about robots and robotics?: 
+Familiar
+Have you come into contact with robots in your daily life?: 
+Often
+
+Question1: 
+Distrust
+Question2: 
+Negative
+Question3: 
+Negative
+Question4: 
+Low
+Question5: 
+Not likely
+Question6: 
+Distrust
+Question7: 
+Distrust
+Question8: 
+Unnecessary
+Question9: 
+Unnecessary
+Question10: 
+Distrust
+Test 1 trust level: 5
+Test 2 trust level: 2
+Test 3 trust level: 6
+Test 4 trust level: 0
+Test 5 trust level: 7
+Test 6 trust level: 10

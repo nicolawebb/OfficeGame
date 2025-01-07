@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/QuadrupedTank.obj-cfaba2d1f97e161dc9aab59b33dc027f.mesh"
+
+[deps]
+
+files=[ "res://.import/QuadrupedTank.obj-cfaba2d1f97e161dc9aab59b33dc027f.mesh" ]
+
+source_file="res://assets/Package/QuadrupedTank.obj"
+dest_files=[ "res://.import/QuadrupedTank.obj-cfaba2d1f97e161dc9aab59b33dc027f.mesh", "res://.import/QuadrupedTank.obj-cfaba2d1f97e161dc9aab59b33dc027f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

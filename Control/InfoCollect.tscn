@@ -1,0 +1,328 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://Control/right.png" type="Texture" id=2]
+[ext_resource path="res://Times New Roman.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Control/InfoCollect.gd" type="Script" id=4]
+[ext_resource path="res://Control/popupmenuforoption.tres" type="Theme" id=5]
+[ext_resource path="res://assets/Audio/kenney_interface-sounds/click_002.ogg" type="AudioStream" id=7]
+[ext_resource path="res://assets/Audio/kenney_interface-sounds/bong_001.ogg" type="AudioStream" id=8]
+
+[sub_resource type="DynamicFontData" id=27]
+font_path = "res://Times New Roman.ttf"
+
+[sub_resource type="DynamicFont" id=13]
+size = 50
+font_data = SubResource( 27 )
+
+[sub_resource type="DynamicFontData" id=30]
+font_path = "res://Times New Roman.ttf"
+
+[sub_resource type="DynamicFont" id=31]
+size = 40
+font_data = SubResource( 30 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.431373, 0.411765, 0.486275, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.172549, 0.164706, 0.196078, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.172549, 0.164706, 0.196078, 1 )
+
+[sub_resource type="DynamicFontData" id=32]
+font_path = "res://Times New Roman.ttf"
+
+[sub_resource type="DynamicFont" id=33]
+size = 40
+font_data = SubResource( 32 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 38
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFontData" id=19]
+font_path = "res://Times New Roman.ttf"
+
+[sub_resource type="DynamicFont" id=20]
+size = 50
+font_data = SubResource( 19 )
+
+[sub_resource type="DynamicFontData" id=34]
+font_path = "res://Times New Roman.ttf"
+
+[sub_resource type="DynamicFont" id=35]
+size = 35
+font_data = SubResource( 34 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.431373, 0.411765, 0.486275, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.172549, 0.164706, 0.196078, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[sub_resource type="DynamicFont" id=21]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFontData" id=36]
+font_path = "res://Times New Roman.ttf"
+
+[sub_resource type="DynamicFont" id=37]
+size = 35
+font_data = SubResource( 36 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.431373, 0.411765, 0.486275, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.172549, 0.164706, 0.196078, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[sub_resource type="DynamicFontData" id=22]
+font_path = "res://Times New Roman.ttf"
+
+[sub_resource type="DynamicFont" id=23]
+size = 38
+font_data = SubResource( 22 )
+
+[sub_resource type="DynamicFontData" id=38]
+font_path = "res://Times New Roman.ttf"
+
+[sub_resource type="DynamicFont" id=39]
+size = 48
+font_data = SubResource( 38 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 2048.0
+margin_bottom = 1200.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_top = 50.0
+margin_right = 2052.0
+margin_bottom = 1134.0
+rect_min_size = Vector2( 0, 400 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_top = 42.0
+margin_right = 2052.0
+margin_bottom = 1042.0
+rect_min_size = Vector2( 2048, 1000 )
+
+[node name="Control" type="Control" parent="CenterContainer/VBoxContainer"]
+margin_right = 2052.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 2048, 100 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 104.0
+margin_right = 2052.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 2048, 100 )
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+margin_right = 400.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 400, 100 )
+custom_fonts/font = SubResource( 13 )
+text = "Gender:"
+align = 1
+valign = 1
+
+[node name="Gender" type="OptionButton" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 404.0
+margin_right = 704.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 300, 0 )
+theme = ExtResource( 5 )
+custom_fonts/font = SubResource( 31 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 4 )
+align = 1
+items = [ "", null, false, 1, null, "Male", null, false, 2, null, "Female", null, false, 3, null, "Other", null, false, 3, null, "Prefer not to say", null, false, 4, null ]
+selected = 0
+
+[node name="Control" type="Control" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 708.0
+margin_right = 1108.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 400, 100 )
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 1112.0
+margin_right = 1512.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 400, 100 )
+custom_fonts/font = SubResource( 13 )
+text = "Age:"
+align = 1
+valign = 1
+
+[node name="Age" type="LineEdit" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 1516.0
+margin_right = 1816.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 300, 100 )
+custom_fonts/font = SubResource( 33 )
+align = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 208.0
+margin_right = 2052.0
+margin_bottom = 308.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="Control" type="Control" parent="CenterContainer/VBoxContainer/HBoxContainer3"]
+margin_right = 1100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 1100, 0 )
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/HBoxContainer3"]
+margin_left = 1104.0
+margin_right = 2052.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 948, 0 )
+
+[node name="Age_warning" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer3/CenterContainer"]
+margin_right = 948.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 948, 100 )
+custom_colors/font_color = Color( 1, 0.121569, 0.121569, 1 )
+custom_fonts/font = SubResource( 16 )
+text = "Please enter a number between 10 to 80"
+align = 1
+
+[node name="Q1" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 312.0
+margin_right = 2052.0
+margin_bottom = 562.0
+rect_min_size = Vector2( 2048, 250 )
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/Q1"]
+margin_right = 2052.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 20 )
+text = "How much do you know about robots and robotics?"
+align = 1
+valign = 1
+
+[node name="Know" type="OptionButton" parent="CenterContainer/VBoxContainer/Q1"]
+margin_top = 104.0
+margin_right = 2052.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 0, 50 )
+theme = ExtResource( 5 )
+custom_fonts/font = SubResource( 35 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 4 )
+align = 1
+items = [ "", null, false, 1, null, "Familiar", null, false, 2, null, "A little", null, false, 3, null, "Not at all", null, false, 4, null ]
+selected = 0
+
+[node name="Q2" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 566.0
+margin_right = 2052.0
+margin_bottom = 816.0
+rect_min_size = Vector2( 2048, 250 )
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/Q2"]
+margin_right = 2052.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+custom_fonts/font = SubResource( 21 )
+text = "Have you come into contact with robots in your daily life?"
+align = 1
+valign = 1
+
+[node name="Know2" type="OptionButton" parent="CenterContainer/VBoxContainer/Q2"]
+margin_top = 104.0
+margin_right = 2052.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 0, 50 )
+theme = ExtResource( 5 )
+custom_fonts/font = SubResource( 37 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/normal = SubResource( 4 )
+align = 1
+items = [ "", null, false, 1, null, "Working/living with robots", null, false, 2, null, "Often", null, false, 3, null, "Occasionally", null, false, 4, null, "Seldom", null, false, 5, null, "Never", null, false, 6, null ]
+selected = 0
+
+[node name="Continue" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 820.0
+margin_right = 2052.0
+margin_bottom = 880.0
+__meta__ = {
+"_edit_use_anchors_": true,
+"_editor_description_": "Continue"
+}
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/Continue"]
+visible = false
+margin_left = 950.0
+margin_right = 1102.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+custom_fonts/font = SubResource( 23 )
+toggle_mode = true
+shortcut_in_tooltip = false
+text = "Continue"
+icon = ExtResource( 2 )
+align = 2
+expand_icon = true
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer/Continue"]
+margin_left = 932.0
+margin_right = 1119.0
+margin_bottom = 60.0
+custom_fonts/font = SubResource( 39 )
+text = "Continue"
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="continue_audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -5.0
+
+[node name="Qbutton" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -15.0
+
+[connection signal="text_entered" from="CenterContainer/VBoxContainer/HBoxContainer2/Age" to="." method="_on_Age_text_entered"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Continue/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Continue/Button2" to="." method="_on_Button2_pressed"]

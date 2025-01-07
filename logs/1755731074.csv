@@ -1,0 +1,9 @@
+ time,player_x,player_y,player_rotation,robot_x,robot_y,robot_rotation, fire_canteen, fire_HR, fire_manager, fire_lounge, fire_warehouse, fire_restroom, fireA_chair, fireA_printer, fireA_bin, fireA_table
+2024-10-28 14:01:58,28.042587,0.047,-90,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True
+2024-10-28 14:01:59,25.249849,0.047,-90,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True
+2024-10-28 14:02:00,21.436567,0.047,-90,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True
+2024-10-28 14:02:01,20.091141,0.047,-90,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True
+2024-10-28 14:02:02,20.527483,-0.623405,-86.454704,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True
+2024-10-28 14:02:03,20.526112,-0.624683,-97.563301,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True
+2024-10-28 14:02:04,20.526112,-0.624683,-97.563301,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True
+2024-10-28 14:02:05,20.526112,-0.624683,-97.563301,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True

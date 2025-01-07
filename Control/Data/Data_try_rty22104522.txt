@@ -1,0 +1,28 @@
+Name: try rty
+Gender: Male
+Age: rtyry
+How much do you know about robots and robotics?: 
+A little
+Have you come into contact with robots in your daily life?: 
+Working/living with robots
+
+Question1: 
+Very Distrust
+Question2: 
+Very Low
+Question3: 
+Distrust
+Question4: 
+Distrust
+Question5: 
+Unnecessary
+Question6: 
+Unnecessary
+Question7: 
+Distrust
+Question8: 
+B
+Question9: 
+B
+Question10: 
+B

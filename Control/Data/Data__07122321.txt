@@ -1,0 +1,8 @@
+Name: Anonymous
+Gender: Female
+Age: 22
+How much do you know about robots and robotics?: 
+Not at all
+Have you come into contact with robots in your daily life?: 
+Occasionally
+

@@ -1,0 +1,33 @@
+Name: 1 1
+Gender: Male
+Age: 1
+How much do you know about robots and robotics?: 
+A little
+Have you come into contact with robots in your daily life?: 
+Working/living with robots
+
+Question1: 
+Trust
+Question2: 
+Very positive
+Question3: 
+Positive
+Question4: 
+Very High
+Question5: 
+Possible
+Question6: 
+Very Trust
+Question7: 
+Trust
+Question8: 
+Very Necessary
+Question9: 
+Necessary
+Question10: 
+Very Trust
+Test 1 trust level: 6
+Test 2 trust level: 10
+Test 3 trust level: 7
+Test 4 trust level: 8
+Test 5 trust level: 8
