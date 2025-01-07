@@ -1,0 +1,2265 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://default_theme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/Audio/kenney_interface-sounds/click_002.ogg" type="AudioStream" id=2]
+[ext_resource path="res://assets/Audio/kenney_interface-sounds/bong_001.ogg" type="AudioStream" id=3]
+[ext_resource path="res://assets/time_roman_36.tres" type="DynamicFont" id=4]
+[ext_resource path="res://QNafter.gd" type="Script" id=5]
+[ext_resource path="res://FredokaOne-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Times New Roman.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFontData" id=32]
+font_path = "res://Times New Roman.ttf"
+
+[sub_resource type="DynamicFont" id=33]
+size = 40
+font_data = SubResource( 32 )
+
+[sub_resource type="Theme" id=5]
+default_font = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 28
+font_data = ExtResource( 7 )
+
+[sub_resource type="ButtonGroup" id=18]
+
+[sub_resource type="ButtonGroup" id=19]
+
+[sub_resource type="ButtonGroup" id=20]
+
+[sub_resource type="ButtonGroup" id=21]
+
+[sub_resource type="ButtonGroup" id=22]
+
+[sub_resource type="DynamicFontData" id=34]
+font_path = "res://Times New Roman.ttf"
+
+[sub_resource type="DynamicFont" id=35]
+size = 40
+font_data = SubResource( 34 )
+
+[sub_resource type="ButtonGroup" id=23]
+
+[sub_resource type="ButtonGroup" id=24]
+
+[sub_resource type="ButtonGroup" id=25]
+
+[sub_resource type="ButtonGroup" id=26]
+
+[sub_resource type="ButtonGroup" id=27]
+
+[sub_resource type="ButtonGroup" id=28]
+
+[sub_resource type="ButtonGroup" id=29]
+
+[sub_resource type="ButtonGroup" id=30]
+
+[sub_resource type="ButtonGroup" id=31]
+
+[sub_resource type="DynamicFont" id=15]
+size = 40
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 80
+font_data = ExtResource( 6 )
+
+[node name="QNafter" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 2048.0
+margin_bottom = 1200.0
+rect_pivot_offset = Vector2( 650, 222 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="Title" type="CenterContainer" parent="ColorRect"]
+margin_right = 2048.0
+margin_bottom = 120.0
+
+[node name="Label" type="Label" parent="ColorRect/Title"]
+margin_left = 389.0
+margin_top = 37.0
+margin_right = 1658.0
+margin_bottom = 82.0
+custom_fonts/font = SubResource( 33 )
+text = "For the following indicators, what do you think the robot's performance is (%)?"
+align = 1
+valign = 1
+
+[node name="Questionnaire" type="CenterContainer" parent="ColorRect"]
+margin_top = 120.0
+margin_right = 2048.0
+margin_bottom = 1020.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/Questionnaire"]
+margin_right = 2048.0
+margin_bottom = 900.0
+rect_min_size = Vector2( 2048, 900 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer"]
+margin_right = 2040.0
+margin_bottom = 2910.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 30
+
+[node name="Q1" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+margin_right = 2040.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 0, 180 )
+rect_pivot_offset = Vector2( -407, -238 )
+
+[node name="Label" type="Label" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1"]
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 33 )
+text = "1. Function successfully"
+
+[node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1"]
+margin_top = 64.0
+margin_right = 2040.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1"]
+margin_top = 88.0
+margin_right = 2040.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 60 )
+custom_constants/separation = 6
+
+[node name="Button" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
+margin_right = 180.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 18 )
+text = "0%"
+
+[node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
+margin_left = 186.0
+margin_right = 366.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 18 )
+text = "10%"
+
+[node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
+margin_left = 372.0
+margin_right = 552.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 18 )
+text = "20%"
+
+[node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
+margin_left = 558.0
+margin_right = 738.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 18 )
+text = "30%"
+
+[node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
+margin_left = 744.0
+margin_right = 924.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 18 )
+text = "40%"
+
+[node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
+margin_left = 930.0
+margin_right = 1110.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 18 )
+text = "50%"
+
+[node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
+margin_left = 1116.0
+margin_right = 1296.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 18 )
+text = "60%"
+
+[node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
+margin_left = 1302.0
+margin_right = 1482.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 18 )
+text = "70%"
+
+[node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
+margin_left = 1488.0
+margin_right = 1668.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 18 )
+text = "80%"
+
+[node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
+margin_left = 1674.0
+margin_right = 1854.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 18 )
+text = "90%"
+
+[node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
+margin_left = 1860.0
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 18 )
+text = "100%"
+
+[node name="Q2" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+margin_top = 210.0
+margin_right = 2040.0
+margin_bottom = 390.0
+rect_min_size = Vector2( 0, 180 )
+rect_pivot_offset = Vector2( -407, -238 )
+
+[node name="Label" type="Label" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2"]
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 33 )
+text = "2. Act consistently"
+
+[node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2"]
+margin_top = 64.0
+margin_right = 2040.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2"]
+margin_top = 88.0
+margin_right = 2040.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 60 )
+custom_constants/separation = 6
+
+[node name="Button" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
+margin_right = 180.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 19 )
+text = "0%"
+
+[node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
+margin_left = 186.0
+margin_right = 366.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 19 )
+text = "10%"
+
+[node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
+margin_left = 372.0
+margin_right = 552.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 19 )
+text = "20%"
+
+[node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
+margin_left = 558.0
+margin_right = 738.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 19 )
+text = "30%"
+
+[node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
+margin_left = 744.0
+margin_right = 924.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 19 )
+text = "40%"
+
+[node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
+margin_left = 930.0
+margin_right = 1110.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 19 )
+text = "50%"
+
+[node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
+margin_left = 1116.0
+margin_right = 1296.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 19 )
+text = "60%"
+
+[node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
+margin_left = 1302.0
+margin_right = 1482.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 19 )
+text = "70%"
+
+[node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
+margin_left = 1488.0
+margin_right = 1668.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 19 )
+text = "80%"
+
+[node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
+margin_left = 1674.0
+margin_right = 1854.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 19 )
+text = "90%"
+
+[node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
+margin_left = 1860.0
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 19 )
+text = "100%"
+
+[node name="Q3" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+margin_top = 420.0
+margin_right = 2040.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 0, 180 )
+rect_pivot_offset = Vector2( -407, -238 )
+
+[node name="Label" type="Label" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3"]
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 33 )
+text = "3. Reliable"
+
+[node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3"]
+margin_top = 64.0
+margin_right = 2040.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3"]
+margin_top = 88.0
+margin_right = 2040.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 60 )
+custom_constants/separation = 6
+
+[node name="Button" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
+margin_right = 180.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 20 )
+text = "0%"
+
+[node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
+margin_left = 186.0
+margin_right = 366.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 20 )
+text = "10%"
+
+[node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
+margin_left = 372.0
+margin_right = 552.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 20 )
+text = "20%"
+
+[node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
+margin_left = 558.0
+margin_right = 738.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 20 )
+text = "30%"
+
+[node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
+margin_left = 744.0
+margin_right = 924.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 20 )
+text = "40%"
+
+[node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
+margin_left = 930.0
+margin_right = 1110.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 20 )
+text = "50%"
+
+[node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
+margin_left = 1116.0
+margin_right = 1296.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 20 )
+text = "60%"
+
+[node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
+margin_left = 1302.0
+margin_right = 1482.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 20 )
+text = "70%"
+
+[node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
+margin_left = 1488.0
+margin_right = 1668.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 20 )
+text = "80%"
+
+[node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
+margin_left = 1674.0
+margin_right = 1854.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 20 )
+text = "90%"
+
+[node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
+margin_left = 1860.0
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 20 )
+text = "100%"
+
+[node name="Q4" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+margin_top = 630.0
+margin_right = 2040.0
+margin_bottom = 810.0
+rect_min_size = Vector2( 0, 180 )
+rect_pivot_offset = Vector2( -407, -238 )
+
+[node name="Label" type="Label" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4"]
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 33 )
+text = "4. Predictable"
+
+[node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4"]
+margin_top = 64.0
+margin_right = 2040.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4"]
+margin_top = 88.0
+margin_right = 2040.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 60 )
+custom_constants/separation = 6
+
+[node name="Button" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
+margin_right = 180.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 21 )
+text = "0%"
+
+[node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
+margin_left = 186.0
+margin_right = 366.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 21 )
+text = "10%"
+
+[node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
+margin_left = 372.0
+margin_right = 552.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 21 )
+text = "20%"
+
+[node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
+margin_left = 558.0
+margin_right = 738.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 21 )
+text = "30%"
+
+[node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
+margin_left = 744.0
+margin_right = 924.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 21 )
+text = "40%"
+
+[node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
+margin_left = 930.0
+margin_right = 1110.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 21 )
+text = "50%"
+
+[node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
+margin_left = 1116.0
+margin_right = 1296.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 21 )
+text = "60%"
+
+[node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
+margin_left = 1302.0
+margin_right = 1482.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 21 )
+text = "70%"
+
+[node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
+margin_left = 1488.0
+margin_right = 1668.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 21 )
+text = "80%"
+
+[node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
+margin_left = 1674.0
+margin_right = 1854.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 21 )
+text = "90%"
+
+[node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
+margin_left = 1860.0
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 21 )
+text = "100%"
+
+[node name="Q5" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+margin_top = 840.0
+margin_right = 2040.0
+margin_bottom = 1020.0
+rect_min_size = Vector2( 0, 180 )
+rect_pivot_offset = Vector2( -407, -238 )
+
+[node name="Label" type="Label" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5"]
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 33 )
+text = "5. Dependable"
+
+[node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5"]
+margin_top = 64.0
+margin_right = 2040.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5"]
+margin_top = 88.0
+margin_right = 2040.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 60 )
+custom_constants/separation = 6
+
+[node name="Button" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
+margin_right = 180.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 22 )
+text = "0%"
+
+[node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
+margin_left = 186.0
+margin_right = 366.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 22 )
+text = "10%"
+
+[node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
+margin_left = 372.0
+margin_right = 552.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 22 )
+text = "20%"
+
+[node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
+margin_left = 558.0
+margin_right = 738.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 22 )
+text = "30%"
+
+[node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
+margin_left = 744.0
+margin_right = 924.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 22 )
+text = "40%"
+
+[node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
+margin_left = 930.0
+margin_right = 1110.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 22 )
+text = "50%"
+
+[node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
+margin_left = 1116.0
+margin_right = 1296.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 22 )
+text = "60%"
+
+[node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
+margin_left = 1302.0
+margin_right = 1482.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 22 )
+text = "70%"
+
+[node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
+margin_left = 1488.0
+margin_right = 1668.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 22 )
+text = "80%"
+
+[node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
+margin_left = 1674.0
+margin_right = 1854.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 22 )
+text = "90%"
+
+[node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
+margin_left = 1860.0
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 22 )
+text = "100%"
+
+[node name="Q6" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+margin_top = 1050.0
+margin_right = 2040.0
+margin_bottom = 1230.0
+rect_min_size = Vector2( 0, 180 )
+rect_pivot_offset = Vector2( -407, -238 )
+
+[node name="Label" type="Label" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6"]
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 35 )
+text = "6. Follow directions"
+
+[node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6"]
+margin_top = 64.0
+margin_right = 2040.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6"]
+margin_top = 88.0
+margin_right = 2040.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 60 )
+custom_constants/separation = 6
+
+[node name="Button" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
+margin_right = 180.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 23 )
+text = "0%"
+
+[node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
+margin_left = 186.0
+margin_right = 366.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 23 )
+text = "10%"
+
+[node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
+margin_left = 372.0
+margin_right = 552.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 23 )
+text = "20%"
+
+[node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
+margin_left = 558.0
+margin_right = 738.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 23 )
+text = "30%"
+
+[node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
+margin_left = 744.0
+margin_right = 924.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 23 )
+text = "40%"
+
+[node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
+margin_left = 930.0
+margin_right = 1110.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 23 )
+text = "50%"
+
+[node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
+margin_left = 1116.0
+margin_right = 1296.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 23 )
+text = "60%"
+
+[node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
+margin_left = 1302.0
+margin_right = 1482.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 23 )
+text = "70%"
+
+[node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
+margin_left = 1488.0
+margin_right = 1668.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 23 )
+text = "80%"
+
+[node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
+margin_left = 1674.0
+margin_right = 1854.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 23 )
+text = "90%"
+
+[node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
+margin_left = 1860.0
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 23 )
+text = "100%"
+
+[node name="Q7" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+margin_top = 1260.0
+margin_right = 2040.0
+margin_bottom = 1440.0
+rect_min_size = Vector2( 0, 180 )
+rect_pivot_offset = Vector2( -407, -238 )
+
+[node name="Label" type="Label" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7"]
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 35 )
+text = "7. Meet the needs of the mission"
+
+[node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7"]
+margin_top = 64.0
+margin_right = 2040.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7"]
+margin_top = 88.0
+margin_right = 2040.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 60 )
+custom_constants/separation = 6
+
+[node name="Button" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
+margin_right = 180.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 24 )
+text = "0%"
+
+[node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
+margin_left = 186.0
+margin_right = 366.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 24 )
+text = "10%"
+
+[node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
+margin_left = 372.0
+margin_right = 552.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 24 )
+text = "20%"
+
+[node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
+margin_left = 558.0
+margin_right = 738.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 24 )
+text = "30%"
+
+[node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
+margin_left = 744.0
+margin_right = 924.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 24 )
+text = "40%"
+
+[node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
+margin_left = 930.0
+margin_right = 1110.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 24 )
+text = "50%"
+
+[node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
+margin_left = 1116.0
+margin_right = 1296.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 24 )
+text = "60%"
+
+[node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
+margin_left = 1302.0
+margin_right = 1482.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 24 )
+text = "70%"
+
+[node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
+margin_left = 1488.0
+margin_right = 1668.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 24 )
+text = "80%"
+
+[node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
+margin_left = 1674.0
+margin_right = 1854.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 24 )
+text = "90%"
+
+[node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
+margin_left = 1860.0
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 24 )
+text = "100%"
+
+[node name="Q8" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+margin_top = 1470.0
+margin_right = 2040.0
+margin_bottom = 1650.0
+rect_min_size = Vector2( 0, 180 )
+rect_pivot_offset = Vector2( -407, -238 )
+
+[node name="Label" type="Label" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8"]
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 35 )
+text = "8. Perform exactly as instructed"
+
+[node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8"]
+margin_top = 64.0
+margin_right = 2040.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8"]
+margin_top = 88.0
+margin_right = 2040.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 60 )
+custom_constants/separation = 6
+
+[node name="Button" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
+margin_right = 180.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 25 )
+text = "0%"
+
+[node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
+margin_left = 186.0
+margin_right = 366.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 25 )
+text = "10%"
+
+[node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
+margin_left = 372.0
+margin_right = 552.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 25 )
+text = "20%"
+
+[node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
+margin_left = 558.0
+margin_right = 738.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 25 )
+text = "30%"
+
+[node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
+margin_left = 744.0
+margin_right = 924.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 25 )
+text = "40%"
+
+[node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
+margin_left = 930.0
+margin_right = 1110.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 25 )
+text = "50%"
+
+[node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
+margin_left = 1116.0
+margin_right = 1296.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 25 )
+text = "60%"
+
+[node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
+margin_left = 1302.0
+margin_right = 1482.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 25 )
+text = "70%"
+
+[node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
+margin_left = 1488.0
+margin_right = 1668.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 25 )
+text = "80%"
+
+[node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
+margin_left = 1674.0
+margin_right = 1854.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 25 )
+text = "90%"
+
+[node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
+margin_left = 1860.0
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 25 )
+text = "100%"
+
+[node name="Q9" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+margin_top = 1680.0
+margin_right = 2040.0
+margin_bottom = 1860.0
+rect_min_size = Vector2( 0, 180 )
+rect_pivot_offset = Vector2( -407, -238 )
+
+[node name="Label" type="Label" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9"]
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 35 )
+text = "9. Have errors"
+
+[node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9"]
+margin_top = 64.0
+margin_right = 2040.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9"]
+margin_top = 88.0
+margin_right = 2040.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 60 )
+custom_constants/separation = 6
+
+[node name="Button" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
+margin_right = 180.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 26 )
+text = "100%"
+
+[node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
+margin_left = 186.0
+margin_right = 366.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 26 )
+text = "90%"
+
+[node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
+margin_left = 372.0
+margin_right = 552.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 26 )
+text = "80%"
+
+[node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
+margin_left = 558.0
+margin_right = 738.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 26 )
+text = "70%"
+
+[node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
+margin_left = 744.0
+margin_right = 924.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 26 )
+text = "60%"
+
+[node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
+margin_left = 930.0
+margin_right = 1110.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 26 )
+text = "50%"
+
+[node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
+margin_left = 1116.0
+margin_right = 1296.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 26 )
+text = "40%"
+
+[node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
+margin_left = 1302.0
+margin_right = 1482.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 26 )
+text = "30%"
+
+[node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
+margin_left = 1488.0
+margin_right = 1668.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 26 )
+text = "20%"
+
+[node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
+margin_left = 1674.0
+margin_right = 1854.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 26 )
+text = "10%"
+
+[node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
+margin_left = 1860.0
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 26 )
+text = "0%"
+
+[node name="Q10" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+margin_top = 1890.0
+margin_right = 2040.0
+margin_bottom = 2070.0
+rect_min_size = Vector2( 0, 180 )
+rect_pivot_offset = Vector2( -407, -238 )
+
+[node name="Label" type="Label" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10"]
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 35 )
+text = "10. Provide appropriate information"
+
+[node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10"]
+margin_top = 64.0
+margin_right = 2040.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10"]
+margin_top = 88.0
+margin_right = 2040.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 60 )
+custom_constants/separation = 6
+
+[node name="Button" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
+margin_right = 180.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 27 )
+text = "0%"
+
+[node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
+margin_left = 186.0
+margin_right = 366.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 27 )
+text = "10%"
+
+[node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
+margin_left = 372.0
+margin_right = 552.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 27 )
+text = "20%"
+
+[node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
+margin_left = 558.0
+margin_right = 738.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 27 )
+text = "30%"
+
+[node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
+margin_left = 744.0
+margin_right = 924.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 27 )
+text = "40%"
+
+[node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
+margin_left = 930.0
+margin_right = 1110.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 27 )
+text = "50%"
+
+[node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
+margin_left = 1116.0
+margin_right = 1296.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 27 )
+text = "60%"
+
+[node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
+margin_left = 1302.0
+margin_right = 1482.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 27 )
+text = "70%"
+
+[node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
+margin_left = 1488.0
+margin_right = 1668.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 27 )
+text = "80%"
+
+[node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
+margin_left = 1674.0
+margin_right = 1854.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 27 )
+text = "90%"
+
+[node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
+margin_left = 1860.0
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 27 )
+text = "100%"
+
+[node name="Q11" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+margin_top = 2100.0
+margin_right = 2040.0
+margin_bottom = 2280.0
+rect_min_size = Vector2( 0, 180 )
+rect_pivot_offset = Vector2( -407, -238 )
+
+[node name="Label" type="Label" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11"]
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 35 )
+text = "11. Malfunction"
+
+[node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11"]
+margin_top = 64.0
+margin_right = 2040.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11"]
+margin_top = 88.0
+margin_right = 2040.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 60 )
+custom_constants/separation = 6
+
+[node name="Button" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
+margin_right = 180.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 28 )
+text = "100%"
+
+[node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
+margin_left = 186.0
+margin_right = 366.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 28 )
+text = "90%"
+
+[node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
+margin_left = 372.0
+margin_right = 552.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 28 )
+text = "80%"
+
+[node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
+margin_left = 558.0
+margin_right = 738.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 28 )
+text = "70%"
+
+[node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
+margin_left = 744.0
+margin_right = 924.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 28 )
+text = "60%"
+
+[node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
+margin_left = 930.0
+margin_right = 1110.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 28 )
+text = "50%"
+
+[node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
+margin_left = 1116.0
+margin_right = 1296.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 28 )
+text = "40%"
+
+[node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
+margin_left = 1302.0
+margin_right = 1482.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 28 )
+text = "30%"
+
+[node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
+margin_left = 1488.0
+margin_right = 1668.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 28 )
+text = "20%"
+
+[node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
+margin_left = 1674.0
+margin_right = 1854.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 28 )
+text = "10%"
+
+[node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
+margin_left = 1860.0
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 28 )
+text = "0%"
+
+[node name="Q12" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+margin_top = 2310.0
+margin_right = 2040.0
+margin_bottom = 2490.0
+rect_min_size = Vector2( 0, 180 )
+rect_pivot_offset = Vector2( -407, -238 )
+
+[node name="Label" type="Label" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12"]
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 35 )
+text = "12. Communicate with people"
+
+[node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12"]
+margin_top = 64.0
+margin_right = 2040.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12"]
+margin_top = 88.0
+margin_right = 2040.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 60 )
+custom_constants/separation = 6
+
+[node name="Button" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
+margin_right = 180.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 29 )
+text = "0%"
+
+[node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
+margin_left = 186.0
+margin_right = 366.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 29 )
+text = "10%"
+
+[node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
+margin_left = 372.0
+margin_right = 552.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 29 )
+text = "20%"
+
+[node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
+margin_left = 558.0
+margin_right = 738.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 29 )
+text = "30%"
+
+[node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
+margin_left = 744.0
+margin_right = 924.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 29 )
+text = "40%"
+
+[node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
+margin_left = 930.0
+margin_right = 1110.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 29 )
+text = "50%"
+
+[node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
+margin_left = 1116.0
+margin_right = 1296.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 29 )
+text = "60%"
+
+[node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
+margin_left = 1302.0
+margin_right = 1482.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 29 )
+text = "70%"
+
+[node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
+margin_left = 1488.0
+margin_right = 1668.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 29 )
+text = "80%"
+
+[node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
+margin_left = 1674.0
+margin_right = 1854.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 29 )
+text = "90%"
+
+[node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
+margin_left = 1860.0
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 29 )
+text = "100%"
+
+[node name="Q13" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+margin_top = 2520.0
+margin_right = 2040.0
+margin_bottom = 2700.0
+rect_min_size = Vector2( 0, 180 )
+rect_pivot_offset = Vector2( -407, -238 )
+
+[node name="Label" type="Label" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13"]
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 35 )
+text = "13. Provide feedback"
+
+[node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13"]
+margin_top = 64.0
+margin_right = 2040.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13"]
+margin_top = 88.0
+margin_right = 2040.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 60 )
+custom_constants/separation = 6
+
+[node name="Button" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
+margin_right = 180.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 30 )
+text = "0%"
+
+[node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
+margin_left = 186.0
+margin_right = 366.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 30 )
+text = "10%"
+
+[node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
+margin_left = 372.0
+margin_right = 552.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 30 )
+text = "20%"
+
+[node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
+margin_left = 558.0
+margin_right = 738.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 30 )
+text = "30%"
+
+[node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
+margin_left = 744.0
+margin_right = 924.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 30 )
+text = "40%"
+
+[node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
+margin_left = 930.0
+margin_right = 1110.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 30 )
+text = "50%"
+
+[node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
+margin_left = 1116.0
+margin_right = 1296.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 30 )
+text = "60%"
+
+[node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
+margin_left = 1302.0
+margin_right = 1482.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 30 )
+text = "70%"
+
+[node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
+margin_left = 1488.0
+margin_right = 1668.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 30 )
+text = "80%"
+
+[node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
+margin_left = 1674.0
+margin_right = 1854.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 30 )
+text = "90%"
+
+[node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
+margin_left = 1860.0
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 30 )
+text = "100%"
+
+[node name="Q14" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+margin_top = 2730.0
+margin_right = 2040.0
+margin_bottom = 2910.0
+rect_min_size = Vector2( 0, 180 )
+rect_pivot_offset = Vector2( -407, -238 )
+
+[node name="Label" type="Label" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14"]
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 35 )
+text = "14. Unresponsive"
+
+[node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14"]
+margin_top = 64.0
+margin_right = 2040.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14"]
+margin_top = 88.0
+margin_right = 2040.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 60 )
+custom_constants/separation = 6
+
+[node name="Button" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
+margin_right = 180.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 31 )
+text = "100%"
+
+[node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
+margin_left = 186.0
+margin_right = 366.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 31 )
+text = "90%"
+
+[node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
+margin_left = 372.0
+margin_right = 552.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 31 )
+text = "80%"
+
+[node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
+margin_left = 558.0
+margin_right = 738.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 31 )
+text = "70%"
+
+[node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
+margin_left = 744.0
+margin_right = 924.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 31 )
+text = "60%"
+
+[node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
+margin_left = 930.0
+margin_right = 1110.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 31 )
+text = "50%"
+
+[node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
+margin_left = 1116.0
+margin_right = 1296.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 31 )
+text = "40%"
+
+[node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
+margin_left = 1302.0
+margin_right = 1482.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 31 )
+text = "30%"
+
+[node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
+margin_left = 1488.0
+margin_right = 1668.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 31 )
+text = "20%"
+
+[node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
+margin_left = 1674.0
+margin_right = 1854.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 31 )
+text = "10%"
+
+[node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
+margin_left = 1860.0
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 31 )
+text = "0%"
+
+[node name="Continue" type="CenterContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -1024.0
+margin_top = -180.0
+margin_right = 1024.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Button" type="Button" parent="ColorRect/Continue"]
+margin_left = 924.0
+margin_top = 60.0
+margin_right = 1124.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 200, 60 )
+custom_fonts/font = SubResource( 15 )
+text = "Continue"
+icon_align = 1
+expand_icon = true
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="continue_audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -5.0
+
+[node name="Qbutton" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -15.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect2/CenterContainer"]
+margin_right = 2048.0
+margin_bottom = 1200.0
+rect_min_size = Vector2( 2048, 1200 )
+
+[node name="Control2" type="Control" parent="ColorRect2/CenterContainer/VBoxContainer"]
+margin_right = 2048.0
+margin_bottom = 420.0
+rect_min_size = Vector2( 0, 420 )
+
+[node name="Label" type="Label" parent="ColorRect2/CenterContainer/VBoxContainer"]
+margin_top = 424.0
+margin_right = 2048.0
+margin_bottom = 521.0
+custom_fonts/font = SubResource( 16 )
+text = "Thank you very much !"
+align = 1
+valign = 1
+
+[node name="Control" type="Control" parent="ColorRect2/CenterContainer/VBoxContainer"]
+margin_top = 525.0
+margin_right = 2048.0
+margin_bottom = 725.0
+rect_min_size = Vector2( 0, 200 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect2/CenterContainer/VBoxContainer"]
+margin_top = 729.0
+margin_right = 2048.0
+margin_bottom = 789.0
+rect_min_size = Vector2( 0, 50 )
+alignment = 1
+
+[node name="Button2" type="Button" parent="ColorRect2/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 924.0
+margin_right = 1124.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 200, 60 )
+custom_fonts/font = SubResource( 15 )
+text = "Exit"
+icon_align = 1
+expand_icon = true

@@ -1,0 +1,28 @@
+Name: test 1534
+Gender: Male
+Age: 23
+How much do you know about robots and robotics?: 
+A little
+Have you come into contact with robots in your daily life?: 
+Working/living with robots
+
+Question1: 
+3
+Question2: 
+3
+Question3: 
+3
+Question4: 
+3
+Question5: 
+3
+Question6: 
+3
+Question7: 
+4
+Question8: 
+3
+Question9: 
+4
+Question10: 
+4

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/airplane-engine-or-house-fan-25284.mp3-b12bc671d1c508865873de8b82af4fc9.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/airplane-engine-or-house-fan-25284.mp3"
+dest_files=[ "res://.import/airplane-engine-or-house-fan-25284.mp3-b12bc671d1c508865873de8b82af4fc9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,8 @@
+Name: ZJ H
+Gender: Male
+Age: 23
+How much do you know about robots and robotics?: 
+Familiar
+Have you come into contact with robots in your daily life?: 
+Working/living with robots
+

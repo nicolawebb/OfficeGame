@@ -1,0 +1,33 @@
+Name: Nicola Webb
+Gender: Female
+Age: 28
+How much do you know about robots and robotics?: 
+A little
+Have you come into contact with robots in your daily life?: 
+Occasionally
+
+Question1: 
+Distrust
+Question2: 
+Neutral
+Question3: 
+Neutral
+Question4: 
+Trust
+Question5: 
+Neutral
+Question6: 
+Neutral
+Question7: 
+Distrust
+Question8: 
+C
+Question9: 
+C
+Question10: 
+C
+Test 1 trust level: 8
+Test 2 trust level: 7
+Test 3 trust level: 6
+Test 4 trust level: 6
+Test 5 trust level: 6

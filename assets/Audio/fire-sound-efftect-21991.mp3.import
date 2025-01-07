@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/fire-sound-efftect-21991.mp3-69cb6d7af580f81c783efa83a4f04cba.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/fire-sound-efftect-21991.mp3"
+dest_files=[ "res://.import/fire-sound-efftect-21991.mp3-69cb6d7af580f81c783efa83a4f04cba.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

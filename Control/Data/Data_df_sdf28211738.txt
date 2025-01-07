@@ -1,0 +1,55 @@
+Name: df sdf
+Gender: Female
+Age: 23
+How much do you know about robots and robotics?: 
+A little
+Have you come into contact with robots in your daily life?: 
+Working/living with robots
+
+Question1: 
+Neutral
+Question2: 
+Neutral
+Question3: 
+Neutral
+Question4: 
+Neutral
+Question5: 
+Neutral
+Question6: 
+Trust
+Question7: 
+Neutral
+Question8: 
+Unnecessary
+Question9: 
+Necessary
+Question10: 
+Neutral
+Test 1 trust level: 8
+Test 2 trust level: 8
+Test 3 trust level: 8
+Test 4 trust level: 8
+Test 5 trust level: 8
+
+After Game
+Question1: 
+Negative
+Question2: 
+Average
+Question3: 
+Untrusted
+Question4: 
+Reliable
+Question5: 
+Inconsistent
+Question6: 
+Neutral
+Question7: 
+Neutral
+Question8: 
+Slightly affected
+Question9: 
+Moderately increased
+Question10: 
+All of the these

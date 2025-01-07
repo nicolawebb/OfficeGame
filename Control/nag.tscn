@@ -1,0 +1,238 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://FredokaOne-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/Audio/kenney_interface-sounds/click_002.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Control/right.png" type="Texture" id=3]
+[ext_resource path="res://Control/nag.gd" type="Script" id=4]
+[ext_resource path="res://assets/Audio/kenney_interface-sounds/bong_001.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Times New Roman.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="ButtonGroup" id=3]
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://Times New Roman.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 40
+font_data = SubResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 34
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 7 )
+
+[node name="Control" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.27451 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+visible = false
+margin_top = 538.0
+margin_right = 2050.0
+margin_bottom = 598.0
+rect_min_size = Vector2( 0, 60 )
+custom_constants/separation = 7
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+margin_right = 180.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 60 )
+custom_fonts/font = SubResource( 5 )
+toggle_mode = true
+group = SubResource( 3 )
+text = "0"
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+margin_left = 187.0
+margin_right = 367.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 60 )
+custom_fonts/font = SubResource( 5 )
+toggle_mode = true
+group = SubResource( 3 )
+text = "1"
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+margin_left = 374.0
+margin_right = 554.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 60 )
+custom_fonts/font = SubResource( 5 )
+toggle_mode = true
+group = SubResource( 3 )
+text = "2"
+
+[node name="Button4" type="Button" parent="HBoxContainer"]
+margin_left = 561.0
+margin_right = 741.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 60 )
+custom_fonts/font = SubResource( 5 )
+toggle_mode = true
+group = SubResource( 3 )
+text = "3"
+
+[node name="Button5" type="Button" parent="HBoxContainer"]
+margin_left = 748.0
+margin_right = 928.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 60 )
+custom_fonts/font = SubResource( 5 )
+toggle_mode = true
+group = SubResource( 3 )
+text = "4"
+
+[node name="Button6" type="Button" parent="HBoxContainer"]
+margin_left = 935.0
+margin_right = 1115.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 60 )
+custom_fonts/font = SubResource( 5 )
+toggle_mode = true
+group = SubResource( 3 )
+text = "5"
+
+[node name="Button7" type="Button" parent="HBoxContainer"]
+margin_left = 1122.0
+margin_right = 1302.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 60 )
+custom_fonts/font = SubResource( 5 )
+toggle_mode = true
+group = SubResource( 3 )
+text = "6"
+
+[node name="Button8" type="Button" parent="HBoxContainer"]
+margin_left = 1309.0
+margin_right = 1489.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 60 )
+custom_fonts/font = SubResource( 5 )
+toggle_mode = true
+group = SubResource( 3 )
+text = "7"
+
+[node name="Button9" type="Button" parent="HBoxContainer"]
+margin_left = 1496.0
+margin_right = 1676.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 60 )
+custom_fonts/font = SubResource( 5 )
+toggle_mode = true
+group = SubResource( 3 )
+text = "8"
+
+[node name="Button10" type="Button" parent="HBoxContainer"]
+margin_left = 1683.0
+margin_right = 1863.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 60 )
+custom_fonts/font = SubResource( 5 )
+toggle_mode = true
+group = SubResource( 3 )
+text = "9"
+
+[node name="Button11" type="Button" parent="HBoxContainer"]
+margin_left = 1870.0
+margin_right = 2050.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 60 )
+custom_fonts/font = SubResource( 5 )
+toggle_mode = true
+group = SubResource( 3 )
+text = "10"
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_top = 300.0
+margin_right = 2048.0
+margin_bottom = 900.0
+rect_min_size = Vector2( 2048, 400 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_top = 100.0
+margin_right = 2048.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 2048, 400 )
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 2048.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+custom_fonts/font = SubResource( 8 )
+text = "How much do you trust your robot companion now?"
+align = 1
+valign = 1
+
+[node name="Control" type="Control" parent="CenterContainer/VBoxContainer"]
+margin_top = 104.0
+margin_right = 2048.0
+margin_bottom = 134.0
+rect_min_size = Vector2( 0, 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="CenterContainer/VBoxContainer"]
+margin_top = 138.0
+margin_right = 2048.0
+margin_bottom = 198.0
+rect_min_size = Vector2( 0, 60 )
+custom_fonts/font = SubResource( 2 )
+align = 1
+placeholder_text = "Please enter a number between 1-10"
+placeholder_alpha = 0.25
+caret_blink = true
+
+[node name="Control2" type="Control" parent="CenterContainer/VBoxContainer"]
+margin_top = 202.0
+margin_right = 2048.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 0, 50 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Continue" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 256.0
+margin_right = 2048.0
+margin_bottom = 316.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/Continue"]
+margin_left = 963.0
+margin_right = 1084.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+custom_fonts/font = SubResource( 6 )
+text = "Continue"
+icon = ExtResource( 3 )
+align = 2
+expand_icon = true
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="continue_audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -5.0
+bus = "SFX"
+
+[node name="Qbutton" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -15.0
+bus = "SFX"

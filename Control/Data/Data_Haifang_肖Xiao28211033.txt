@@ -1,0 +1,28 @@
+Name: Haifang 肖Xiao
+Gender: Female
+Age: 23
+How much do you know about robots and robotics?: 
+A little
+Have you come into contact with robots in your daily life?: 
+Occasionally
+
+Question1: 
+Trust
+Question2: 
+Positive
+Question3: 
+Positive
+Question4: 
+High
+Question5: 
+Very likely
+Question6: 
+Trust
+Question7: 
+Trust
+Question8: 
+Neutral
+Question9: 
+Necessary
+Question10: 
+Trust

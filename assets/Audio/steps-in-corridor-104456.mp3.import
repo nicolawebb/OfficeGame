@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/steps-in-corridor-104456.mp3-6e3be6c29e9da295abd73f68a56a7b94.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/steps-in-corridor-104456.mp3"
+dest_files=[ "res://.import/steps-in-corridor-104456.mp3-6e3be6c29e9da295abd73f68a56a7b94.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,26 @@
+ time,player_x,player_y,player_rotation,robot_x,robot_y,robot_rotation, fire_canteen, fire_HR, fire_manager, fire_lounge, fire_warehouse, fire_restroom, fireA_chair, fireA_printer, fireA_bin, fireA_table
+2024-10-29 14:52:14,28.042587,0.047,-90.236351,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:15,28.042587,0.047,-90.236351,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:16,28.042587,0.047,-90.236351,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:17,27.815958,0.046066,-90.236351,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:18,24.553709,0.03261,-90.236351,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:21,21.262705,0.019042,-90.236351,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:22,18.339405,0.006989,-90.236351,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:23,14.424382,-0.009151,-90.236351,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:24,10.431091,-0.032195,-90.236351,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:25,6.921352,-0.019003,-88.818237,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:26,6.915506,-0.018919,-90.118172,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:27,6.915506,-0.018919,-85.509285,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:28,6.915506,-0.018919,-85.509285,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:29,27,0,-90,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:30,27,0,-87.636467,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:31,25.353888,0.089515,-89.763649,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:32,21.560663,0.128898,-89.645477,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:35,18.198906,0.153751,-89.881828,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:36,16.98428,0.159898,-88.227348,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:37,14.192593,0.122754,-91.890823,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:38,10.286272,0.001073,-91.890823,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
+2024-10-29 14:52:39,9.174397,-0.035315,-91.890823,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,True
+2024-10-29 14:52:40,8.438187,-0.059621,-91.890823,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,True
+2024-10-29 14:52:41,8.438187,-0.059621,-91.890823,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,True
+2024-10-29 14:52:42,8.438187,-0.059621,-91.890823,28.948,-16.6698,0,True,True,True,True,True,True,True,True,True,True,False
