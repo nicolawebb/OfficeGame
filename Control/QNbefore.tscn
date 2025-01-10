@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Control/QNbefore.gd" type="Script" id=2]
 [ext_resource path="res://default_theme.tres" type="Theme" id=3]
@@ -38,9 +38,29 @@ default_font = ExtResource( 4 )
 
 [sub_resource type="ButtonGroup" id=7]
 
-[sub_resource type="ButtonGroup" id=8]
+[sub_resource type="ButtonGroup" id=20]
 
 [sub_resource type="ButtonGroup" id=9]
+
+[sub_resource type="ButtonGroup" id=21]
+
+[sub_resource type="ButtonGroup" id=22]
+
+[sub_resource type="ButtonGroup" id=23]
+
+[sub_resource type="ButtonGroup" id=24]
+
+[sub_resource type="ButtonGroup" id=25]
+
+[sub_resource type="ButtonGroup" id=26]
+
+[sub_resource type="ButtonGroup" id=27]
+
+[sub_resource type="ButtonGroup" id=28]
+
+[sub_resource type="ButtonGroup" id=29]
+
+[sub_resource type="ButtonGroup" id=30]
 
 [sub_resource type="DynamicFont" id=16]
 size = 50
@@ -94,8 +114,9 @@ margin_right = 2036.0
 margin_bottom = 141.0
 rect_min_size = Vector2( 0, 60 )
 custom_fonts/font = SubResource( 14 )
-text = "The following questions are designed to investigate your attitude towards collaborative robots. Please select the option that best fits your true feelings. 
-(1 represents strongly disagree, 5 represents strongly agree)"
+text = "Please read the following statements and answer based on how much you agree with each statement. 
+
+All items are anchored from 1 to 7 (“Completely disagree”–“Completely agree”)."
 autowrap = true
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -213,7 +234,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "2.  I think working with robots in emergency missions would make the mission easier."
+text = "2.  Persons and organizations related to development of robots will consider the needs, thoughts and feelings of their users"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2"]
 margin_top = 64.0
@@ -316,7 +337,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "3.  I look forward to working with robots."
+text = "3. I can trust a robot"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3"]
 margin_top = 64.0
@@ -419,7 +440,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "4. I believe robots can improve the efficiency of firefighting tasks."
+text = "4. I would feel relaxed talking with a robot"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4"]
 margin_top = 64.0
@@ -522,7 +543,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "5.  I think robots can provide safety in dangerous situations."
+text = "5. If robots had emotions, I would be able to befriend them"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5"]
 margin_top = 64.0
@@ -625,7 +646,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "	6. I'm worried that the robot will make mistakes in its tasks."
+text = "6. I would feel uneasy if I was given a job where I had to use robots"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6"]
 margin_top = 64.0
@@ -728,7 +749,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "7. I feel uneasy working with robots."
+text = "7. I fear that a robot would not understand my commands"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7"]
 margin_top = 64.0
@@ -831,7 +852,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "8. I was worried that the robot wouldn't be able to understand or follow my instructions."
+text = "8. Robots scare me"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8"]
 margin_top = 64.0
@@ -934,7 +955,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "9. I think there are risks in using robots in firefighting missions."
+text = "9. I would feel very nervous just being around a robot"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9"]
 margin_top = 64.0
@@ -955,7 +976,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 8 )
+group = SubResource( 20 )
 text = "1"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
@@ -966,7 +987,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 8 )
+group = SubResource( 20 )
 text = "2"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
@@ -977,7 +998,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 8 )
+group = SubResource( 20 )
 text = "3"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
@@ -988,7 +1009,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 8 )
+group = SubResource( 20 )
 text = "4"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
@@ -999,7 +1020,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 8 )
+group = SubResource( 20 )
 text = "5"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
@@ -1010,7 +1031,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 8 )
+group = SubResource( 20 )
 text = "6"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
@@ -1021,7 +1042,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 8 )
+group = SubResource( 20 )
 text = "7"
 
 [node name="Q10" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -1037,7 +1058,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "10. I am concerned that the robot may not work properly in an emergency."
+text = "10. I don’t want a robot to touch me"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10"]
 margin_top = 64.0
@@ -1140,7 +1161,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "10. I am concerned that the robot may not work properly in an emergency."
+text = "11. Robots are necessary because they can do jobs that are too hard or too dangerous for people"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11"]
 margin_top = 64.0
@@ -1161,7 +1182,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 21 )
 text = "1"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
@@ -1172,7 +1193,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 21 )
 text = "2"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
@@ -1183,7 +1204,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 21 )
 text = "3"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
@@ -1194,7 +1215,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 21 )
 text = "4"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
@@ -1205,7 +1226,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 21 )
 text = "5"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
@@ -1216,7 +1237,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 21 )
 text = "6"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
@@ -1227,7 +1248,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 21 )
 text = "7"
 
 [node name="Q12" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -1243,7 +1264,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "10. I am concerned that the robot may not work properly in an emergency."
+text = "12. Robots can make life easier"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12"]
 margin_top = 64.0
@@ -1264,7 +1285,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 22 )
 text = "1"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
@@ -1275,7 +1296,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 22 )
 text = "2"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
@@ -1286,7 +1307,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 22 )
 text = "3"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
@@ -1297,7 +1318,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 22 )
 text = "4"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
@@ -1308,7 +1329,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 22 )
 text = "5"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
@@ -1319,7 +1340,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 22 )
 text = "6"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
@@ -1330,7 +1351,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 22 )
 text = "7"
 
 [node name="Q13" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -1346,7 +1367,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "10. I am concerned that the robot may not work properly in an emergency."
+text = "13. Assigning routine tasks to robots lets people do more meaningful tasks"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13"]
 margin_top = 64.0
@@ -1367,7 +1388,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 23 )
 text = "1"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
@@ -1378,7 +1399,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 23 )
 text = "2"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
@@ -1389,7 +1410,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 23 )
 text = "3"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
@@ -1400,7 +1421,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 23 )
 text = "4"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
@@ -1411,7 +1432,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 23 )
 text = "5"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
@@ -1422,7 +1443,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 23 )
 text = "6"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
@@ -1433,7 +1454,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 23 )
 text = "7"
 
 [node name="Q14" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -1449,7 +1470,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "10. I am concerned that the robot may not work properly in an emergency."
+text = "14. Dangerous tasks should primarily be given to robots"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14"]
 margin_top = 64.0
@@ -1470,7 +1491,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 24 )
 text = "1"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
@@ -1481,7 +1502,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 24 )
 text = "2"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
@@ -1492,7 +1513,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 24 )
 text = "3"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
@@ -1503,7 +1524,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 24 )
 text = "4"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
@@ -1514,7 +1535,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 24 )
 text = "5"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
@@ -1525,7 +1546,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 24 )
 text = "6"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
@@ -1536,7 +1557,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 24 )
 text = "7"
 
 [node name="Q15" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -1552,7 +1573,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "10. I am concerned that the robot may not work properly in an emergency."
+text = "15. Robots are a good thing for society, because they help people"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15"]
 margin_top = 64.0
@@ -1573,7 +1594,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 25 )
 text = "1"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15/HBoxContainer"]
@@ -1584,7 +1605,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 25 )
 text = "2"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15/HBoxContainer"]
@@ -1595,7 +1616,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 25 )
 text = "3"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15/HBoxContainer"]
@@ -1606,7 +1627,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 25 )
 text = "4"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15/HBoxContainer"]
@@ -1617,7 +1638,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 25 )
 text = "5"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15/HBoxContainer"]
@@ -1628,7 +1649,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 25 )
 text = "6"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15/HBoxContainer"]
@@ -1639,7 +1660,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 25 )
 text = "7"
 
 [node name="Q16" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -1655,7 +1676,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "10. I am concerned that the robot may not work properly in an emergency."
+text = "16. Robots may make us even lazier"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16"]
 margin_top = 64.0
@@ -1676,7 +1697,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 26 )
 text = "1"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16/HBoxContainer"]
@@ -1687,7 +1708,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 26 )
 text = "2"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16/HBoxContainer"]
@@ -1698,7 +1719,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 26 )
 text = "3"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16/HBoxContainer"]
@@ -1709,7 +1730,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 26 )
 text = "4"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16/HBoxContainer"]
@@ -1720,7 +1741,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 26 )
 text = "5"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16/HBoxContainer"]
@@ -1731,7 +1752,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 26 )
 text = "6"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16/HBoxContainer"]
@@ -1742,7 +1763,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 26 )
 text = "7"
 
 [node name="Q17" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -1758,7 +1779,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "10. I am concerned that the robot may not work properly in an emergency."
+text = "17. Widespread use of robots is going to take away jobs from people"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q17"]
 margin_top = 64.0
@@ -1779,7 +1800,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 27 )
 text = "1"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q17/HBoxContainer"]
@@ -1790,7 +1811,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 27 )
 text = "2"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q17/HBoxContainer"]
@@ -1801,7 +1822,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 27 )
 text = "3"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q17/HBoxContainer"]
@@ -1812,7 +1833,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 27 )
 text = "4"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q17/HBoxContainer"]
@@ -1823,7 +1844,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 27 )
 text = "5"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q17/HBoxContainer"]
@@ -1834,7 +1855,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 27 )
 text = "6"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q17/HBoxContainer"]
@@ -1845,7 +1866,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 27 )
 text = "7"
 
 [node name="Q18" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -1861,7 +1882,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "10. I am concerned that the robot may not work properly in an emergency."
+text = "18. I am afraid that robots will encourage less interaction between humans"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q18"]
 margin_top = 64.0
@@ -1882,7 +1903,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 28 )
 text = "1"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q18/HBoxContainer"]
@@ -1893,7 +1914,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 28 )
 text = "2"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q18/HBoxContainer"]
@@ -1904,7 +1925,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 28 )
 text = "3"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q18/HBoxContainer"]
@@ -1915,7 +1936,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 28 )
 text = "4"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q18/HBoxContainer"]
@@ -1926,7 +1947,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 28 )
 text = "5"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q18/HBoxContainer"]
@@ -1937,7 +1958,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 28 )
 text = "6"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q18/HBoxContainer"]
@@ -1948,7 +1969,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 28 )
 text = "7"
 
 [node name="Q19" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -1964,7 +1985,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "10. I am concerned that the robot may not work properly in an emergency."
+text = "19. Robotics is one of the areas of technology that needs to be closely monitored"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q19"]
 margin_top = 64.0
@@ -1985,7 +2006,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 29 )
 text = "1"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q19/HBoxContainer"]
@@ -1996,7 +2017,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 29 )
 text = "2"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q19/HBoxContainer"]
@@ -2007,7 +2028,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 29 )
 text = "3"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q19/HBoxContainer"]
@@ -2018,7 +2039,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 29 )
 text = "4"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q19/HBoxContainer"]
@@ -2029,7 +2050,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 29 )
 text = "5"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q19/HBoxContainer"]
@@ -2040,7 +2061,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 29 )
 text = "6"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q19/HBoxContainer"]
@@ -2051,7 +2072,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 29 )
 text = "7"
 
 [node name="Q20" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -2067,7 +2088,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "10. I am concerned that the robot may not work properly in an emergency."
+text = "20. Unregulated use of robotics can lead to societal upheavals"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q20"]
 margin_top = 64.0
@@ -2088,7 +2109,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 30 )
 text = "1"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q20/HBoxContainer"]
@@ -2099,7 +2120,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 30 )
 text = "2"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q20/HBoxContainer"]
@@ -2110,7 +2131,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 30 )
 text = "3"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q20/HBoxContainer"]
@@ -2121,7 +2142,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 30 )
 text = "4"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q20/HBoxContainer"]
@@ -2132,7 +2153,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 30 )
 text = "5"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q20/HBoxContainer"]
@@ -2143,7 +2164,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 30 )
 text = "6"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q20/HBoxContainer"]
@@ -2154,7 +2175,7 @@ rect_min_size = Vector2( 250, 0 )
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 15 )
 toggle_mode = true
-group = SubResource( 9 )
+group = SubResource( 30 )
 text = "7"
 
 [node name="Continue" type="CenterContainer" parent="ColorRect"]
