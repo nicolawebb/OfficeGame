@@ -14,7 +14,17 @@ onready var questions = [
 	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer,
 	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer,
 	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer,
-	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer
+	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer,
+	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer,
+	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer,
+	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer,
+	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer,
+	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15/HBoxContainer,
+	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16/HBoxContainer,
+	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q17/HBoxContainer,
+	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q18/HBoxContainer,
+	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q19/HBoxContainer,
+	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q20/HBoxContainer
 ]
 onready var InfoCollect = get_node("../InfoCollect")
 signal completed()
