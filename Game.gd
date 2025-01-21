@@ -75,11 +75,6 @@ func _ready():
 	time_start= OS.get_unix_time()
 		
 	
-#	if debug:
-#		$CanvasLayer.visible = false
-#		GameState.mode = GameState.STANDALONE
-	
-	
 	randomize()
 	
 	var _err = $CanvasLayer/UI/Settings.connect("on_toggle_laser", self, "toggle_robots_lasers")
@@ -618,7 +613,9 @@ func debug_point(pos):
 	
 ######### save data ###########
 var file = File.new()
-var path ="logs"
+#var path ="logs"
+#var path = "http://109.228.57.101/logs"
+
 
 var timer = Timer.new()
 var gamedata_logging_timer = Timer.new()
@@ -639,67 +636,150 @@ func _on_QNafter_completed2(answer_data):
 	create_q2_file(answer_data)
 
 
-func create_d_file(id, answer_data):
 
-	var path_modified = "%s/%s_demographic.csv" % [path, id]
-	print("PATH", path_modified)
-	var file = File.new()
-	var error = file.open(path_modified, File.WRITE)
-	if error != OK:
-		print("Error opening file: " + path_modified)
+var URL_LOGS = "http://109.228.57.101/cgi-bin/save_game_data.py"  # Server URL where the script is located
+
+func create_d_file(id, answer_data, use_ssl=false):
+	var file_name = "%s_demographic.csv" % id  # File name for each player
+	print("File Name Q: %s" % file_name)
+	var data = {
+		"file_name": file_name,
+		"id": id,
+		"answers": answer_data
+	}
+	
+	# Convert data to JSON string
+	var json_data = JSON.print(data)
+
+	# Initialize HTTPRequest and send the POST request
+	var http_request = HTTPRequest.new()
+	add_child(http_request)
+	
+	# Send the POST request to the server (no need to include file name here)
+	var headers = ["Content-Type: application/x-www-form-urlencoded"]
+	var query = "game_data=" + json_data
+	var err = http_request.request(URL_LOGS, headers, use_ssl, HTTPClient.METHOD_POST, query)
+	
+	if err != OK:
+		print("Error sending POST request: ", err)
 		return
-	else: 
-		print("File created for the user with id %s" % id)
-
-	file.store_line("name,gender,age,robot_exp,robot_contact")
-
-	var row = ",".join(answer_data)
-	file.store_line(row)
-
-	file.close()
-	print("Answers saved to the file.")
+	
+	# Handle response
+	yield(http_request, "request_completed")
+	print("Data sent to the server.")
 
 
-
-func create_q_file(answer_data):
+func create_q_file(answer_data, use_ssl=false):
+	
 	for player in $Players.get_children():
 		var id = player.player_id
-		var path_modified = "%s/%s_questionnaire1.csv" % [path, id]
-		var file = File.new()
-		var error = file.open(path_modified, File.WRITE)
-		if error != OK:
-			print("Error opening file: " + path_modified)
+		var file_name = "%s_questionnaire1.csv" % id  # File name for each player
+		print("File Name Q: %s" % file_name)
+		
+		# Prepare the data to be sent as JSON, including the header and answers
+		var data = {
+			"file_name": file_name,
+			"header": "1,2,3,4,5,6,7,8,9,10",
+			"answers": answer_data
+		}
+		
+		# Convert data to JSON string
+		var json_data = JSON.print(data)
+		
+		# Initialize HTTPRequest and send the POST request
+		var http_request = HTTPRequest.new()
+		add_child(http_request)
+		
+		# Send the POST request to the server
+		var headers = ["Content-Type: application/x-www-form-urlencoded"]
+		var query = "game_data=" + json_data
+		var err = http_request.request(URL_LOGS, headers, use_ssl, HTTPClient.METHOD_POST, query)
+		
+		if err != OK:
+			print("Error sending POST request for player ID %s: " % id, err)
 			return
-		else: 
-			print("File created for the user with id %s" % id)
+		
+		# Handle response
+		yield(http_request, "request_completed")
+		print("Data sent to the server for player ID %s." % id)
 
-		file.store_line("1,2,3,4,5,6,7,8,9,10")
 
-		var row = ",".join(answer_data)
-		file.store_line(row)
+#
+#func create_q_file(answer_data):
+#	for player in $Players.get_children():
+#		var id = player.player_id
+#		var path_modified = "%s/%s_questionnaire1.csv" % [path, id]
+#		print("PATH Q ", path_modified)
+#		var file = File.new()
+#		var error = file.open(path_modified, File.WRITE)
+#		if error != OK:
+#			print("Error opening file: " + path_modified)
+#			return
+#		else: 
+#			print("File created for the user with id %s" % id)
+#
+#		file.store_line("1,2,3,4,5,6,7,8,9,10")
+#
+#		var row = ",".join(answer_data)
+#		file.store_line(row)
+#
+#		file.close()
+#		print("Answers saved to the file.")
 
-		file.close()
-		print("Answers saved to the file.")
+#
+#func create_q_file(answer_data: Array) -> void:
+#	for player in $Players.get_children():
+#		var id = player.player_id
+#		var path_modified = "%s/%s_questionnaire1.csv" % [path, id]
+#		print("Attempting to save file to:", path_modified)
+#
+#		var file = File.new()
+#		var error = file.open(path_modified, File.WRITE)
+#		if error != OK:
+#			print("Error opening file:", path_modified, "Error Code:", str(error))
+#			continue
+#
+#		file.store_line("1,2,3,4,5,6,7,8,9,10")
+#		file.store_line(",".join(answer_data))
+#		file.close()
+#		print("File successfully saved to:", path_modified)
 
-func create_q2_file(answer_data):
+func create_q2_file(answer_data, use_ssl=false):
+	var URL_LOGS = "http://109.228.57.101/cgi-bin/save_game_data.py"  # Server URL where the script is located
+	
 	for player in $Players.get_children():
 		var id = player.player_id
-		var path_modified = "%s/%s_questionnaire2.csv" % [path, id]
-		var file = File.new()
-		var error = file.open(path_modified, File.WRITE)
-		if error != OK:
-			print("Error opening file: " + path_modified)
+		var file_name = "%s_questionnaire2.csv" % id  # File name for each player
+		print("File Name Q2: %s" % file_name)
+		
+		# Prepare the data to be sent as JSON, including the header and answers
+		var data = {
+			"file_name": file_name,
+			"header": "1,2,3,4,5,6,7,8,9,10,11,12,13,14",
+			"answers": answer_data
+		}
+		
+		# Convert data to JSON string
+		var json_data = JSON.print(data)
+		
+		# Initialize HTTPRequest and send the POST request
+		var http_request = HTTPRequest.new()
+		add_child(http_request)
+		
+		# Send the POST request to the server
+		var headers = ["Content-Type: application/x-www-form-urlencoded"]
+		var query = "game_data=" + json_data
+		var err = http_request.request(URL_LOGS, headers, use_ssl, HTTPClient.METHOD_POST, query)
+		
+		if err != OK:
+			print("Error sending POST request for player ID %s: " % id, err)
 			return
-		else: 
-			print("File created for the user with id %s" % id)
+		
+		# Handle response
+		yield(http_request, "request_completed")
+		print("Data sent to the server for player ID %s." % id)
 
-		file.store_line("1,2,3,4,5,6,7,8,9,10,11,12,13,14")
 
-		var row = ",".join(answer_data)
-		file.store_line(row)
-
-		file.close()
-		print("Answers saved to the file.")
 
 func assign_random_ids_to_players(answer_data):
 	print(answer_data)
@@ -721,100 +801,117 @@ func _on_TrainArea_tp(origin, basis):
 		start_recording_gamedata(player.player_id)
 #	connect("game_over", self, "_on_CheckPoint_game_over")	
 
-
-
-#create a file and add the first line: the user id 
+# Create a file and add the first line: the user ID and headers
 func create_file(name): 
-	var path_modified = path + "/%s"%name + ".csv"
+	var path = "http://109.228.57.101/cgi-bin"
+	var path_modified = path + "/%s" % name + ".csv"
 
-	file.open(path_modified ,file.WRITE)
-	if not file.is_open():
+	var file = File.new()
+	var error = file.open(path_modified, File.WRITE)
+	if error != OK:
 		print("Error opening file: " + path_modified)
 		return
 	else: 
-		print("file created for the user with id %s"%name )
+		print("File created for the user with ID %s" % name)
 
-	#file.store_line(dateRFC1123)
-	#file.store_line("user : %s"%name )
-	file.store_line( " time,player_x,player_y,player_rotation,robot_x,robot_y,robot_rotation, fire_canteen, fire_HR, fire_manager, fire_lounge, fire_warehouse, fire_restroom, fireA_chair, fireA_printer, fireA_bin, fireA_table, robot_call")
-	file.close()
-#	start_recording_gamedata(name)
-	
-	
+		# Add user ID as the first line
+		file.store_line("user: %s" % name)  
+		
+		# Add headers for the game data
+		file.store_line("time,player_x,player_y,player_rotation,robot_x,robot_y,robot_rotation,fire_canteen,fire_HR,fire_manager,fire_lounge,fire_warehouse,fire_restroom,fireA_chair,fireA_printer,fireA_bin,fireA_table,robot_call")
+		file.close()
+
+	# Start recording game data for this user
+	start_recording_gamedata(name)
+
+
+# Start recording game data and set up a timer for periodic logging
 func start_recording_gamedata(name):
-	gamedata_logging_timer = Timer.new()
+	var gamedata_logging_timer = Timer.new()
 	add_child(gamedata_logging_timer)
 	
 	gamedata_logging_timer.connect("timeout", self, "log_positions", [name])
-	gamedata_logging_timer.set_wait_time(LOGGING_PERIOD)
-	gamedata_logging_timer.set_one_shot(false) # Make sure it loops
+	gamedata_logging_timer.set_wait_time(LOGGING_PERIOD)  # Define the logging period
+	gamedata_logging_timer.set_one_shot(false)  # Ensure it loops
 	gamedata_logging_timer.start()
 	
-	# first data logging
+	# First data logging immediately
 	log_positions(name)
 
 
+# Track whether we are waiting for the signal to start logging
 var waiting_for_signal = false
+
+# Log player and robot positions, along with fire and other data
 func log_positions(name):
 	if not waiting_for_signal:
 		waiting_for_signal = true
 		yield($RobotPath/PathFollow, "entered")
 		waiting_for_signal = false
 
-	var data = {}
+	# Prepare the data to log
 	for p in $Players.get_children(): 
 		var datetime = OS.get_datetime()
 		var formatted_time = "%04d-%02d-%02d %02d:%02d:%02d" % [
 			datetime.year, datetime.month, datetime.day, datetime.hour, datetime.minute, datetime.second
 		]
-		data["time"] = formatted_time
-		data["player_x"] = p.global_transform.origin.x
-		data["player_y"] = p.global_transform.origin.z
-		data["plater_rotation"] = p.rotation_degrees.y
-		
-		data["robot_x"] = $RobotPath/PathFollow/Robot.global_transform.origin.x
-		data["robot_y"] = $RobotPath/PathFollow/Robot.global_transform.origin.z
-		data["robot_rotation"] = $RobotPath/PathFollow/Robot.rotation_degrees.y
-		#Log fires
-		data["fire_canteen"] = $FireGroup/Canteen/fire/flames.emitting
-		data["fire_HR"] = $FireGroup/HRdep/fire/flames.emitting
-		data["fire_manager"] = $FireGroup/Manager/fire/flames.emitting
-		data["fire_lounge"] = $FireGroup/Lounge/fire/flames.emitting
-		data["fire_warehouse"] = $FireGroup/Warehouse/fire/flames.emitting
-		data["fire_restroom"] = $FireGroup/Restroom/fire/flames.emitting
-		
-		data["fireA_chair"] = $FireGroup_after/Lazychair/fire/flames.emitting
-		data["fireA_printer"] = $FireGroup_after/Printer/fire/flames.emitting
-		data["fireA_bin"] = $FireGroup_after/Bin/fire/flames.emitting
-		data["fireA_table"] = $FireGroup_after/Table/fire/flames.emitting
-		
-		data["robot_call"] = ChatLabel.text
 
-		# Logging each player's data individually
-		print("data", data)
-		save_data(name, data)
-		
+		var data = {
+			"time": formatted_time,
+			"player_x": p.global_transform.origin.x,
+			"player_y": p.global_transform.origin.z,
+			"player_rotation": p.rotation_degrees.y,
+			"robot_x": $RobotPath/PathFollow/Robot.global_transform.origin.x,
+			"robot_y": $RobotPath/PathFollow/Robot.global_transform.origin.z,
+			"robot_rotation": $RobotPath/PathFollow/Robot.rotation_degrees.y,
+			"fire_canteen": $FireGroup/Canteen/fire/flames.emitting,
+			"fire_HR": $FireGroup/HRdep/fire/flames.emitting,
+			"fire_manager": $FireGroup/Manager/fire/flames.emitting,
+			"fire_lounge": $FireGroup/Lounge/fire/flames.emitting,
+			"fire_warehouse": $FireGroup/Warehouse/fire/flames.emitting,
+			"fire_restroom": $FireGroup/Restroom/fire/flames.emitting,
+			"fireA_chair": $FireGroup_after/Lazychair/fire/flames.emitting,
+			"fireA_printer": $FireGroup_after/Printer/fire/flames.emitting,
+			"fireA_bin": $FireGroup_after/Bin/fire/flames.emitting,
+			"fireA_table": $FireGroup_after/Table/fire/flames.emitting,
+			"robot_call": ChatLabel.text
+		}
+
+		# Log data for each player
+		print("Data logged for user %s: " % name, data)
+		send_data_to_server(name, data)
+
+
+# Send data via HTTP POST request to the server
+func send_data_to_server(name, data):
+	var URL_LOGS = "http://109.228.57.101/cgi-bin/save_game_data.py"  # Server URL where the script is located
 	
+	# Prepare the data to be sent as JSON, including the header and answers
+	var data_to_send = {
+		"id": name,
+		"data": data
+	}
 
+	# Convert data to JSON string
+	var json_data = JSON.print(data_to_send)
 
-#id instead of name
-func save_data(name, data): #save the data in the csv file nammed name.csv
-	var path_modified = path + "/%s"%name + ".csv"
-	file.open(path_modified,file.READ_WRITE)
-	if not file.is_open():
-		print("Error opening file: " + path_modified)
+	# Initialize HTTPRequest and send the POST request
+	var http_request = HTTPRequest.new()
+	add_child(http_request)
+	
+	# Send the POST request to the server
+	var headers = ["Content-Type: application/x-www-form-urlencoded"]
+	var query = "game_data=" + json_data
+	var err = http_request.request(URL_LOGS, headers, false, HTTPClient.METHOD_POST, query)
+	
+	if err != OK:
+		print("Error sending POST request for player ID %s: " % name, err)
 		return
 	
-	file.seek_end()
-	
-	var row_data = []
-	
-	for key in data.keys():
-		row_data.append(str(data[key]))
-	
-	file.store_line(",".join(row_data))
-	
-	file.close()
+	# Handle response (optional, can be used for debugging)
+	yield(http_request, "request_completed")
+	print("Data sent to the server for player ID %s." % name)
+
 	
 
 
