@@ -632,8 +632,8 @@ func _on_QNbefore_completed(answer_data):
 	create_q_file(answer_data)
 	
 
-func _on_QNafter_completed2(answer_data):
-	create_q2_file(answer_data)
+func _on_QNafter_completed(answer_data, count):
+	create_q2_file(answer_data, count)
 
 
 
@@ -704,78 +704,39 @@ func create_q_file(answer_data, use_ssl=false):
 		print("Data sent to the server for player ID %s." % id)
 
 
-#
-#func create_q_file(answer_data):
-#	for player in $Players.get_children():
-#		var id = player.player_id
-#		var path_modified = "%s/%s_questionnaire1.csv" % [path, id]
-#		print("PATH Q ", path_modified)
-#		var file = File.new()
-#		var error = file.open(path_modified, File.WRITE)
-#		if error != OK:
-#			print("Error opening file: " + path_modified)
-#			return
-#		else: 
-#			print("File created for the user with id %s" % id)
-#
-#		file.store_line("1,2,3,4,5,6,7,8,9,10")
-#
-#		var row = ",".join(answer_data)
-#		file.store_line(row)
-#
-#		file.close()
-#		print("Answers saved to the file.")
 
-#
-#func create_q_file(answer_data: Array) -> void:
-#	for player in $Players.get_children():
-#		var id = player.player_id
-#		var path_modified = "%s/%s_questionnaire1.csv" % [path, id]
-#		print("Attempting to save file to:", path_modified)
-#
-#		var file = File.new()
-#		var error = file.open(path_modified, File.WRITE)
-#		if error != OK:
-#			print("Error opening file:", path_modified, "Error Code:", str(error))
-#			continue
-#
-#		file.store_line("1,2,3,4,5,6,7,8,9,10")
-#		file.store_line(",".join(answer_data))
-#		file.close()
-#		print("File successfully saved to:", path_modified)
-
-func create_q2_file(answer_data, use_ssl=false):
-	var URL_LOGS = "http://109.228.57.101/cgi-bin/save_game_data.py"  # Server URL where the script is located
-	
+func create_q2_file(answer_data, count, use_ssl=false):
+	var questionnaire_type = "questionnaire2" if count == 1 else "questionnaire3"
+	print(count)
 	for player in $Players.get_children():
 		var id = player.player_id
-		var file_name = "%s_questionnaire2.csv" % id  # File name for each player
-		print("File Name Q2: %s" % file_name)
-		
-		# Prepare the data to be sent as JSON, including the header and answers
+		var file_name = "%s_%s.csv" % [id, questionnaire_type]
+		print("File Name: %s" % file_name)
+
+		# Prepare data 
 		var data = {
 			"file_name": file_name,
-			"header": "1,2,3,4,5,6,7,8,9,10,11,12,13,14",
+			"header": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
 			"answers": answer_data
 		}
-		
+
 		# Convert data to JSON string
 		var json_data = JSON.print(data)
-		
+
 		# Initialize HTTPRequest and send the POST request
 		var http_request = HTTPRequest.new()
 		add_child(http_request)
-		
-		# Send the POST request to the server
+
+		# Send POST request
 		var headers = ["Content-Type: application/x-www-form-urlencoded"]
 		var query = "game_data=" + json_data
 		var err = http_request.request(URL_LOGS, headers, use_ssl, HTTPClient.METHOD_POST, query)
-		
+
 		if err != OK:
-			print("Error sending POST request for player ID %s: " % id, err)
-			return
-		
-		# Handle response
+			print("Error sending POST request for player ID %s: %d" % [id, err])
+			http_request.queue_free()
+			continue
+
 		yield(http_request, "request_completed")
 		print("Data sent to the server for player ID %s." % id)
 
