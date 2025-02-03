@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://Control/text_intro.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Control/Text_intro2.tscn" type="PackedScene" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://assets/Package/Arachnoid.png" type="Texture" id=19]
 [ext_resource path="res://assets/Audio/airplane-engine-or-house-fan-25284.mp3" type="AudioStream" id=20]
 [ext_resource path="res://Control/text_gj2.tscn" type="PackedScene" id=21]
+[ext_resource path="res://assets/simple arrow obj.obj" type="ArrayMesh" id=22]
 
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 1, 3.99119, 14.8395 )
@@ -204,6 +205,8 @@ data = PoolVector3Array( -1.4, 2.3, 0.1, -1.4, 2.5, 0.2, -1.4, 2.3, 0.2, -1.4, 2
 
 [sub_resource type="BoxShape" id=47]
 extents = Vector3( 7.09102, 2.77352, 8.78958 )
+
+[sub_resource type="Skin" id=51]
 
 [node name="TrainArea" type="Spatial"]
 script = ExtResource( 7 )
@@ -527,6 +530,16 @@ shape = SubResource( 47 )
 
 [node name="Position3D" type="Position3D" parent="Training2/Area5"]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.5, 0, 0 )
+
+[node name="arrow1" type="MeshInstance" parent="."]
+transform = Transform( -0.73428, 0.0193874, -0.67857, 0.408359, -0.785896, -0.464338, -0.542288, -0.618054, 0.56915, -8.38605, 2.97101, 3.35768 )
+mesh = ExtResource( 22 )
+skin = SubResource( 51 )
+
+[node name="arrow2" type="MeshInstance" parent="."]
+transform = Transform( -0.917554, -0.0343496, -0.396125, -0.236604, -0.753504, 0.613392, -0.319552, 0.656545, 0.683254, -7.73361, 3.20084, -3.14924 )
+mesh = ExtResource( 22 )
+skin = SubResource( 51 )
 
 [connection signal="body_entered" from="Training1/Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Training1/Area2" to="." method="_on_Area2_body_entered"]
