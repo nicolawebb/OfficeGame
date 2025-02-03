@@ -724,7 +724,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.427, 0, -1.33055 )
 curve = SubResource( 3 )
 
 [node name="NPC2" parent="NPCPath/NPCPath2" instance=ExtResource( 7 )]
-transform = Transform( 0.990202, 0, 0.139639, 0, 1, 0, -0.139646, 0, 0.990154, 4.22644, 0, 0.860942 )
+transform = Transform( 0.990202, 0, 0.139639, 0, 1, 0, -0.139646, 0, 0.990153, 4.22644, 0, 0.860942 )
 
 [node name="NPCPath3" type="Path" parent="NPCPath"]
 curve = SubResource( 4 )
@@ -1181,7 +1181,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.90953, 0 )
 curve = SubResource( 52 )
 
 [node name="NPC1" parent="S2_NPC" instance=ExtResource( 7 )]
-transform = Transform( -0.0212871, 0, 0.999745, 0, 1, 0, -0.999774, 0, -0.0212865, -0.147757, 4.45561, -8.58706 )
+transform = Transform( -0.0212871, 0, 0.999744, 0, 1, 0, -0.999774, 0, -0.0212865, -0.147757, 4.45561, -8.58706 )
 
 [node name="FireGroup_after" type="Spatial" parent="."]
 script = ExtResource( 56 )
@@ -1318,6 +1318,7 @@ shape = SubResource( 58 )
 transform = Transform( -0.136667, 0, -0.990617, 0, 1, 0, 0.990617, 0, -0.136667, 27.2557, 0.981911, -12.5802 )
 
 [connection signal="all_putOut" from="CanvasLayer/UI" to="CheckPoint" method="_on_UI_all_putOut"]
+[connection signal="completed" from="CanvasLayer/QNafter" to="." method="_on_QNafter_completed"]
 [connection signal="completed" from="CanvasLayer/QNbefore" to="." method="_on_QNbefore_completed"]
 [connection signal="infocollected" from="CanvasLayer/InfoCollect" to="." method="_on_InfoCollect_infocollected"]
 [connection signal="body_entered" from="CheckPoint" to="CheckPoint" method="_on_CheckPoint_body_entered"]
