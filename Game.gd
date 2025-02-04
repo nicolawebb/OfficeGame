@@ -756,102 +756,21 @@ func assign_random_ids_to_players(answer_data):
 
 func _on_TrainArea_tp(origin, basis):
 	var id = yield($CanvasLayer/QNbefore, "completed")
-	print("ID: ", id)
+#	print("ID: ", id)
 	for player in $Players.get_children():
 		create_file(player.player_id)
 		start_recording_gamedata(player.player_id)
 #	connect("game_over", self, "_on_CheckPoint_game_over")	
 
-# Create a file and add the first line: the user ID and headers
-func create_file(name): 
-	var path = "http://109.228.57.101/cgi-bin"
-	var path_modified = path + "/%s" % name + ".csv"
-
-	var file = File.new()
-	var error = file.open(path_modified, File.WRITE)
-	if error != OK:
-		print("Error opening file: " + path_modified)
-		return
-	else: 
-		print("File created for the user with ID %s" % name)
-
-		# Add user ID as the first line
-		file.store_line("user: %s" % name)  
-		
-		# Add headers for the game data
-		file.store_line("time,player_x,player_y,player_rotation,robot_x,robot_y,robot_rotation,fire_canteen,fire_HR,fire_manager,fire_lounge,fire_warehouse,fire_restroom,fireA_chair,fireA_printer,fireA_bin,fireA_table,robot_call")
-		file.close()
-
-	# Start recording game data for this user
-	start_recording_gamedata(name)
-
-
-# Start recording game data and set up a timer for periodic logging
-func start_recording_gamedata(name):
-	var gamedata_logging_timer = Timer.new()
-	add_child(gamedata_logging_timer)
-	
-	gamedata_logging_timer.connect("timeout", self, "log_positions", [name])
-	gamedata_logging_timer.set_wait_time(LOGGING_PERIOD)  # Define the logging period
-	gamedata_logging_timer.set_one_shot(false)  # Ensure it loops
-	gamedata_logging_timer.start()
-	
-	# First data logging immediately
-	log_positions(name)
-
-
-# Track whether we are waiting for the signal to start logging
-var waiting_for_signal = false
-
-# Log player and robot positions, along with fire and other data
-func log_positions(name):
-	if not waiting_for_signal:
-		waiting_for_signal = true
-		yield($RobotPath/PathFollow, "entered")
-		waiting_for_signal = false
-
-	# Prepare the data to log
-	for p in $Players.get_children(): 
-		var datetime = OS.get_datetime()
-		var formatted_time = "%04d-%02d-%02d %02d:%02d:%02d" % [
-			datetime.year, datetime.month, datetime.day, datetime.hour, datetime.minute, datetime.second
-		]
-
-		var data = {
-			"time": formatted_time,
-			"player_x": p.global_transform.origin.x,
-			"player_y": p.global_transform.origin.z,
-			"player_rotation": p.rotation_degrees.y,
-			"robot_x": $RobotPath/PathFollow/Robot.global_transform.origin.x,
-			"robot_y": $RobotPath/PathFollow/Robot.global_transform.origin.z,
-			"robot_rotation": $RobotPath/PathFollow/Robot.rotation_degrees.y,
-			"fire_canteen": $FireGroup/Canteen/fire/flames.emitting,
-			"fire_HR": $FireGroup/HRdep/fire/flames.emitting,
-			"fire_manager": $FireGroup/Manager/fire/flames.emitting,
-			"fire_lounge": $FireGroup/Lounge/fire/flames.emitting,
-			"fire_warehouse": $FireGroup/Warehouse/fire/flames.emitting,
-			"fire_restroom": $FireGroup/Restroom/fire/flames.emitting,
-			"fireA_chair": $FireGroup_after/Lazychair/fire/flames.emitting,
-			"fireA_printer": $FireGroup_after/Printer/fire/flames.emitting,
-			"fireA_bin": $FireGroup_after/Bin/fire/flames.emitting,
-			"fireA_table": $FireGroup_after/Table/fire/flames.emitting,
-			"robot_call": ChatLabel.text
-		}
-
-		# Log data for each player
-		print("Data logged for user %s: " % name, data)
-		send_data_to_server(name, data)
-
-
-# Send data via HTTP POST request to the server
-func send_data_to_server(name, data):
-	var URL_LOGS = "http://109.228.57.101/cgi-bin/save_game_data.py"  # Server URL where the script is located
-	
+	# Create a file and add the first line: the user ID and headers
+func create_file(id): 
+	var file_name = "%s_logs.csv" % [id]
 	# Prepare the data to be sent as JSON, including the header and answers
+	
 	var data_to_send = {
-		"id": name,
-		"data": data
-	}
+			"file_name": file_name,
+			"header": "time,player_x,player_y,player_rotation,robot_x,robot_y,robot_rotation,fire_canteen,fire_HR,fire_manager,fire_lounge,fire_warehouse,fire_restroom,fireA_chair,fireA_printer,fireA_bin,fireA_table,robot_call",
+		}
 
 	# Convert data to JSON string
 	var json_data = JSON.print(data_to_send)
@@ -866,14 +785,129 @@ func send_data_to_server(name, data):
 	var err = http_request.request(URL_LOGS, headers, false, HTTPClient.METHOD_POST, query)
 	
 	if err != OK:
-		print("Error sending POST request for player ID %s: " % name, err)
+		print("Error sending POST request for player ID %s: " % id, err)
 		return
 	
 	# Handle response (optional, can be used for debugging)
 	yield(http_request, "request_completed")
-	print("Data sent to the server for player ID %s." % name)
+	print("Data sent to the server for player ID %s." % id)
+	print("this should only be called once")
 
+	# Start recording game data for this user
+	start_recording_gamedata(id)
+
+
+# Start recording game data and set up a timer for periodic logging
+func start_recording_gamedata(id):
+	var gamedata_logging_timer = Timer.new()
+	add_child(gamedata_logging_timer)
 	
+	gamedata_logging_timer.connect("timeout", self, "log_positions", [id])
+	gamedata_logging_timer.set_wait_time(LOGGING_PERIOD)  # Define the logging period
+	gamedata_logging_timer.set_one_shot(false)  # Ensure it loops
+	gamedata_logging_timer.start()
+	
+	# First data logging immediately
+	log_positions(id)
+
+
+# Track whether we are waiting for the signal to start logging
+var waiting_for_signal = false
+
+# Log player and robot positions, along with fire and other data
+func log_positions(id):
+	if not waiting_for_signal:
+		waiting_for_signal = true
+		yield($RobotPath/PathFollow, "entered")
+		waiting_for_signal = false
+
+	# Prepare the data to log
+	for p in $Players.get_children(): 
+		var datetime = OS.get_datetime()
+		var formatted_time = "%04d-%02d-%02d %02d:%02d:%02d" % [
+			datetime.year, datetime.month, datetime.day, datetime.hour, datetime.minute, datetime.second
+		]
+#
+#		var data = {
+#			"time": formatted_time,
+#			"player_x": p.global_transform.origin.x,
+#			"player_y": p.global_transform.origin.z,
+#			"player_rotation": p.rotation_degrees.y,
+#			"robot_x": $RobotPath/PathFollow/Robot.global_transform.origin.x,
+#			"robot_y": $RobotPath/PathFollow/Robot.global_transform.origin.z,
+#			"robot_rotation": $RobotPath/PathFollow/Robot.rotation_degrees.y,
+#			"fire_canteen": $FireGroup/Canteen/fire/flames.emitting,
+#			"fire_HR": $FireGroup/HRdep/fire/flames.emitting,
+#			"fire_manager": $FireGroup/Manager/fire/flames.emitting,
+#			"fire_lounge": $FireGroup/Lounge/fire/flames.emitting,
+#			"fire_warehouse": $FireGroup/Warehouse/fire/flames.emitting,
+#			"fire_restroom": $FireGroup/Restroom/fire/flames.emitting,
+#			"fireA_chair": $FireGroup_after/Lazychair/fire/flames.emitting,
+#			"fireA_printer": $FireGroup_after/Printer/fire/flames.emitting,
+#			"fireA_bin": $FireGroup_after/Bin/fire/flames.emitting,
+#			"fireA_table": $FireGroup_after/Table/fire/flames.emitting,
+#			"robot_call": ChatLabel.text
+#		}
+
+		var data = [
+	formatted_time,  # time
+	p.global_transform.origin.x,  # player_x
+	p.global_transform.origin.z,  # player_y
+	p.rotation_degrees.y,  # player_rotation
+	$RobotPath/PathFollow/Robot.global_transform.origin.x,  # robot_x
+	$RobotPath/PathFollow/Robot.global_transform.origin.z,  # robot_y
+	$RobotPath/PathFollow/Robot.rotation_degrees.y,  # robot_rotation
+	$FireGroup/Canteen/fire/flames.emitting,  # fire_canteen
+	$FireGroup/HRdep/fire/flames.emitting,  # fire_HR
+	$FireGroup/Manager/fire/flames.emitting,  # fire_manager
+	$FireGroup/Lounge/fire/flames.emitting,  # fire_lounge
+	$FireGroup/Warehouse/fire/flames.emitting,  # fire_warehouse
+	$FireGroup/Restroom/fire/flames.emitting,  # fire_restroom
+	$FireGroup_after/Lazychair/fire/flames.emitting,  # fireA_chair
+	$FireGroup_after/Printer/fire/flames.emitting,  # fireA_printer
+	$FireGroup_after/Bin/fire/flames.emitting,  # fireA_bin
+	$FireGroup_after/Table/fire/flames.emitting,  # fireA_table
+	ChatLabel.text  # robot_call
+]
+#		var data = [formatted_time, p.global_transform.origin.x, p.global_transform.origin.z, p.rotation_degrees.y, $RobotPath/PathFollow/Robot.global_transform.origin.x, $RobotPath/PathFollow/Robot.global_transform.origin.z, $RobotPath/PathFollow/Robot.rotation_degrees.y, $FireGroup/Canteen/fire/flames.emitting, $FireGroup/HRdep/fire/flames.emitting, $FireGroup/Manager/fire/flames.emitting, $FireGroup/Lounge/fire/flames.emitting, $FireGroup/Warehouse/fire/flames.emitting, $FireGroup/Restroom/fire/flames.emitting, $FireGroup_after/Lazychair/fire/flames.emitting, $FireGroup_after/Printer/fire/flames.emitting, $FireGroup_after/Bin/fire/flames.emitting, $FireGroup_after/Table/fire/flames.emitting, ChatLabel.text]
+		
+		# Log data for each player
+		print("Data logged for user %s: " % id, data)
+		send_data_to_server(id, data)
+
+
+# Send data via HTTP POST request to the server
+func send_data_to_server(id, data, use_ssl=false):
+	for player in $Players.get_children():
+		var file_name = "%s_logs.csv" % [id]  
+		var data2 = ["w",1, "w","w","w", "w","w","w", "w","w","w", "w","w","w", "w"]
+		# Prepare data to send
+		var data_to_send = {
+			"file_name": file_name,
+			"answers": data2
+		}
+
+
+		# Convert data to JSON string
+		var json_data = JSON.print(data_to_send)
+		print("JSON DATA: ", json_data)
+		# Initialize HTTPRequest and send the POST request
+		var http_request = HTTPRequest.new()
+		add_child(http_request)
+
+		# Send POST request
+		var headers = ["Content-Type: application/x-www-form-urlencoded"]
+		var query = "game_data=" + json_data
+		var err = http_request.request(URL_LOGS, headers, use_ssl, HTTPClient.METHOD_POST, query)
+
+		if err != OK:
+			print("Error sending POST request for player ID %s: %d" % [id, err])
+			http_request.queue_free()
+			continue
+
+		yield(http_request, "request_completed")
+		print("Data sent to the server for player ID %s." % id)
+
 
 
 # for each player, this function will create and save a string on a csv file with the position, orientation and expression of the player
