@@ -26,6 +26,7 @@ var nag_count = 1
 var path ="res://logs"
 var answer_data = []
 signal fire_put_out
+signal completed
 
 # 初始化
 func _ready():	
@@ -72,6 +73,7 @@ func _on_continue():
 			yield(get_tree().create_timer(2.0), "timeout")
 			UI_node.coming()
 		if nag_count == 7 or nag_count == 8:
+			emit_signal("completed", answer_data)
 			end_game(answer_data)
 	#	$Tween.remove_all()
 	#	$Tween.interpolate_property(self, "modulate:a", null, 0.0, 0.5, Tween.TRANS_QUART, Tween.EASE_IN)
@@ -99,7 +101,7 @@ func logging(trust_level):
 		answer_data.append(str(trust_level))
 		
 		if nag_count == 9:
-			end_game(answer_data)
+			emit_signal("completed", answer_data)
 	else:
 		nag_count += 1
 

@@ -827,27 +827,7 @@ func log_positions(id):
 		var formatted_time = "%04d-%02d-%02d %02d:%02d:%02d" % [
 			datetime.year, datetime.month, datetime.day, datetime.hour, datetime.minute, datetime.second
 		]
-#
-#		var data = {
-#			"time": formatted_time,
-#			"player_x": p.global_transform.origin.x,
-#			"player_y": p.global_transform.origin.z,
-#			"player_rotation": p.rotation_degrees.y,
-#			"robot_x": $RobotPath/PathFollow/Robot.global_transform.origin.x,
-#			"robot_y": $RobotPath/PathFollow/Robot.global_transform.origin.z,
-#			"robot_rotation": $RobotPath/PathFollow/Robot.rotation_degrees.y,
-#			"fire_canteen": $FireGroup/Canteen/fire/flames.emitting,
-#			"fire_HR": $FireGroup/HRdep/fire/flames.emitting,
-#			"fire_manager": $FireGroup/Manager/fire/flames.emitting,
-#			"fire_lounge": $FireGroup/Lounge/fire/flames.emitting,
-#			"fire_warehouse": $FireGroup/Warehouse/fire/flames.emitting,
-#			"fire_restroom": $FireGroup/Restroom/fire/flames.emitting,
-#			"fireA_chair": $FireGroup_after/Lazychair/fire/flames.emitting,
-#			"fireA_printer": $FireGroup_after/Printer/fire/flames.emitting,
-#			"fireA_bin": $FireGroup_after/Bin/fire/flames.emitting,
-#			"fireA_table": $FireGroup_after/Table/fire/flames.emitting,
-#			"robot_call": ChatLabel.text
-#		}
+
 
 		var data = [
 	formatted_time,  # time
@@ -872,7 +852,7 @@ func log_positions(id):
 #		var data = [formatted_time, p.global_transform.origin.x, p.global_transform.origin.z, p.rotation_degrees.y, $RobotPath/PathFollow/Robot.global_transform.origin.x, $RobotPath/PathFollow/Robot.global_transform.origin.z, $RobotPath/PathFollow/Robot.rotation_degrees.y, $FireGroup/Canteen/fire/flames.emitting, $FireGroup/HRdep/fire/flames.emitting, $FireGroup/Manager/fire/flames.emitting, $FireGroup/Lounge/fire/flames.emitting, $FireGroup/Warehouse/fire/flames.emitting, $FireGroup/Restroom/fire/flames.emitting, $FireGroup_after/Lazychair/fire/flames.emitting, $FireGroup_after/Printer/fire/flames.emitting, $FireGroup_after/Bin/fire/flames.emitting, $FireGroup_after/Table/fire/flames.emitting, ChatLabel.text]
 		
 		# Log data for each player
-		print("Data logged for user %s: " % id, data)
+#		print("Data logged for user %s: " % id, data)
 		send_data_to_server(id, data)
 
 
@@ -880,17 +860,50 @@ func log_positions(id):
 func send_data_to_server(id, data, use_ssl=false):
 	for player in $Players.get_children():
 		var file_name = "%s_logs.csv" % [id]  
-		var data2 = ["w",1, "w","w","w", "w","w","w", "w","w","w", "w","w","w", "w"]
+#		var data2 = ["w","w", "w","w","w", "w","w","w", "w","w","w", "w","w","w", "w"]
 		# Prepare data to send
 		var data_to_send = {
 			"file_name": file_name,
-			"answers": data2
+			"answers": data
 		}
 
 
 		# Convert data to JSON string
 		var json_data = JSON.print(data_to_send)
-		print("JSON DATA: ", json_data)
+		# Initialize HTTPRequest and send the POST request
+		var http_request = HTTPRequest.new()
+		add_child(http_request)
+
+		# Send POST request
+		var headers = ["Content-Type: application/x-www-form-urlencoded"]
+		var query = "game_data=" + json_data
+		var err = http_request.request(URL_LOGS, headers, use_ssl, HTTPClient.METHOD_POST, query)
+
+		if err != OK:
+			print("Error sending POST request for player ID %s: %d" % [id, err])
+			http_request.queue_free()
+			continue
+
+		yield(http_request, "request_completed")
+		print("Data sent to the server for player ID %s." % id)
+
+
+func _on_nag_completed(answer_data, use_ssl=false):
+	for player in $Players.get_children():
+		var id = player.player_id
+		var file_name = "%s_nags.csv" % [id]
+		print("File Name: %s" % file_name)
+
+		# Prepare data 
+		var data = {
+			"file_name": file_name,
+			"header": "1,2,3,4,5,6,7",
+			"answers": answer_data
+		}
+		print("nag data: ", answer_data)
+		# Convert data to JSON string
+		var json_data = JSON.print(data)
+
 		# Initialize HTTPRequest and send the POST request
 		var http_request = HTTPRequest.new()
 		add_child(http_request)
@@ -1052,10 +1065,4 @@ func update_players_proximity():
 		if GameState.mode == GameState.STANDALONE:
 			local_player.puppet_update_players_in_range(proximity[p]["in_range"],proximity[p]["not_in_range"])
 	
-
-
-
-
-
-
 

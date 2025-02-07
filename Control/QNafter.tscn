@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://default_theme.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Audio/kenney_interface-sounds/click_002.ogg" type="AudioStream" id=2]
@@ -22,15 +22,15 @@ default_font = ExtResource( 4 )
 size = 28
 font_data = ExtResource( 7 )
 
-[sub_resource type="ButtonGroup" id=18]
+[sub_resource type="ButtonGroup" id=36]
 
-[sub_resource type="ButtonGroup" id=19]
+[sub_resource type="ButtonGroup" id=37]
 
-[sub_resource type="ButtonGroup" id=20]
+[sub_resource type="ButtonGroup" id=38]
 
-[sub_resource type="ButtonGroup" id=21]
+[sub_resource type="ButtonGroup" id=39]
 
-[sub_resource type="ButtonGroup" id=22]
+[sub_resource type="ButtonGroup" id=40]
 
 [sub_resource type="DynamicFontData" id=34]
 font_path = "res://Times New Roman.ttf"
@@ -39,23 +39,27 @@ font_path = "res://Times New Roman.ttf"
 size = 40
 font_data = SubResource( 34 )
 
-[sub_resource type="ButtonGroup" id=23]
+[sub_resource type="ButtonGroup" id=41]
 
-[sub_resource type="ButtonGroup" id=24]
+[sub_resource type="ButtonGroup" id=42]
 
-[sub_resource type="ButtonGroup" id=25]
+[sub_resource type="ButtonGroup" id=43]
 
-[sub_resource type="ButtonGroup" id=26]
+[sub_resource type="ButtonGroup" id=44]
 
-[sub_resource type="ButtonGroup" id=27]
+[sub_resource type="ButtonGroup" id=45]
 
-[sub_resource type="ButtonGroup" id=28]
+[sub_resource type="ButtonGroup" id=46]
 
-[sub_resource type="ButtonGroup" id=29]
+[sub_resource type="ButtonGroup" id=47]
 
-[sub_resource type="ButtonGroup" id=30]
+[sub_resource type="ButtonGroup" id=48]
 
-[sub_resource type="ButtonGroup" id=31]
+[sub_resource type="ButtonGroup" id=49]
+
+[sub_resource type="ButtonGroup" id=50]
+
+[sub_resource type="ButtonGroup" id=51]
 
 [sub_resource type="DynamicFont" id=15]
 size = 40
@@ -102,7 +106,7 @@ rect_min_size = Vector2( 2048, 900 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer"]
 margin_right = 2040.0
-margin_bottom = 2910.0
+margin_bottom = 3330.0
 rect_min_size = Vector2( 0, 100 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -142,7 +146,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 18 )
+group = SubResource( 36 )
 text = "0%"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
@@ -153,7 +157,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 18 )
+group = SubResource( 36 )
 text = "10%"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
@@ -164,7 +168,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 18 )
+group = SubResource( 36 )
 text = "20%"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
@@ -175,7 +179,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 18 )
+group = SubResource( 36 )
 text = "30%"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
@@ -186,7 +190,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 18 )
+group = SubResource( 36 )
 text = "40%"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
@@ -197,7 +201,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 18 )
+group = SubResource( 36 )
 text = "50%"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
@@ -208,7 +212,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 18 )
+group = SubResource( 36 )
 text = "60%"
 
 [node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
@@ -219,7 +223,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 18 )
+group = SubResource( 36 )
 text = "70%"
 
 [node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
@@ -230,7 +234,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 18 )
+group = SubResource( 36 )
 text = "80%"
 
 [node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
@@ -241,7 +245,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 18 )
+group = SubResource( 36 )
 text = "90%"
 
 [node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q1/HBoxContainer"]
@@ -252,7 +256,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 18 )
+group = SubResource( 36 )
 text = "100%"
 
 [node name="Q2" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -290,7 +294,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 19 )
+group = SubResource( 37 )
 text = "0%"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
@@ -301,7 +305,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 19 )
+group = SubResource( 37 )
 text = "10%"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
@@ -312,7 +316,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 19 )
+group = SubResource( 37 )
 text = "20%"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
@@ -323,7 +327,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 19 )
+group = SubResource( 37 )
 text = "30%"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
@@ -334,7 +338,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 19 )
+group = SubResource( 37 )
 text = "40%"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
@@ -345,7 +349,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 19 )
+group = SubResource( 37 )
 text = "50%"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
@@ -356,7 +360,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 19 )
+group = SubResource( 37 )
 text = "60%"
 
 [node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
@@ -367,7 +371,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 19 )
+group = SubResource( 37 )
 text = "70%"
 
 [node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
@@ -378,7 +382,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 19 )
+group = SubResource( 37 )
 text = "80%"
 
 [node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
@@ -389,7 +393,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 19 )
+group = SubResource( 37 )
 text = "90%"
 
 [node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q2/HBoxContainer"]
@@ -400,7 +404,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 19 )
+group = SubResource( 37 )
 text = "100%"
 
 [node name="Q3" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -438,7 +442,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 20 )
+group = SubResource( 38 )
 text = "0%"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
@@ -449,7 +453,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 20 )
+group = SubResource( 38 )
 text = "10%"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
@@ -460,7 +464,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 20 )
+group = SubResource( 38 )
 text = "20%"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
@@ -471,7 +475,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 20 )
+group = SubResource( 38 )
 text = "30%"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
@@ -482,7 +486,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 20 )
+group = SubResource( 38 )
 text = "40%"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
@@ -493,7 +497,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 20 )
+group = SubResource( 38 )
 text = "50%"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
@@ -504,7 +508,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 20 )
+group = SubResource( 38 )
 text = "60%"
 
 [node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
@@ -515,7 +519,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 20 )
+group = SubResource( 38 )
 text = "70%"
 
 [node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
@@ -526,7 +530,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 20 )
+group = SubResource( 38 )
 text = "80%"
 
 [node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
@@ -537,7 +541,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 20 )
+group = SubResource( 38 )
 text = "90%"
 
 [node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q3/HBoxContainer"]
@@ -548,7 +552,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 20 )
+group = SubResource( 38 )
 text = "100%"
 
 [node name="Q4" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -586,7 +590,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 21 )
+group = SubResource( 39 )
 text = "0%"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
@@ -597,7 +601,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 21 )
+group = SubResource( 39 )
 text = "10%"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
@@ -608,7 +612,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 21 )
+group = SubResource( 39 )
 text = "20%"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
@@ -619,7 +623,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 21 )
+group = SubResource( 39 )
 text = "30%"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
@@ -630,7 +634,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 21 )
+group = SubResource( 39 )
 text = "40%"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
@@ -641,7 +645,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 21 )
+group = SubResource( 39 )
 text = "50%"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
@@ -652,7 +656,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 21 )
+group = SubResource( 39 )
 text = "60%"
 
 [node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
@@ -663,7 +667,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 21 )
+group = SubResource( 39 )
 text = "70%"
 
 [node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
@@ -674,7 +678,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 21 )
+group = SubResource( 39 )
 text = "80%"
 
 [node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
@@ -685,7 +689,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 21 )
+group = SubResource( 39 )
 text = "90%"
 
 [node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q4/HBoxContainer"]
@@ -696,7 +700,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 21 )
+group = SubResource( 39 )
 text = "100%"
 
 [node name="Q5" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -734,7 +738,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 22 )
+group = SubResource( 40 )
 text = "0%"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
@@ -745,7 +749,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 22 )
+group = SubResource( 40 )
 text = "10%"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
@@ -756,7 +760,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 22 )
+group = SubResource( 40 )
 text = "20%"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
@@ -767,7 +771,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 22 )
+group = SubResource( 40 )
 text = "30%"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
@@ -778,7 +782,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 22 )
+group = SubResource( 40 )
 text = "40%"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
@@ -789,7 +793,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 22 )
+group = SubResource( 40 )
 text = "50%"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
@@ -800,7 +804,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 22 )
+group = SubResource( 40 )
 text = "60%"
 
 [node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
@@ -811,7 +815,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 22 )
+group = SubResource( 40 )
 text = "70%"
 
 [node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
@@ -822,7 +826,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 22 )
+group = SubResource( 40 )
 text = "80%"
 
 [node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
@@ -833,7 +837,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 22 )
+group = SubResource( 40 )
 text = "90%"
 
 [node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q5/HBoxContainer"]
@@ -844,7 +848,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 22 )
+group = SubResource( 40 )
 text = "100%"
 
 [node name="Q6" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -882,7 +886,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 23 )
+group = SubResource( 41 )
 text = "0%"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
@@ -893,7 +897,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 23 )
+group = SubResource( 41 )
 text = "10%"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
@@ -904,7 +908,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 23 )
+group = SubResource( 41 )
 text = "20%"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
@@ -915,7 +919,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 23 )
+group = SubResource( 41 )
 text = "30%"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
@@ -926,7 +930,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 23 )
+group = SubResource( 41 )
 text = "40%"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
@@ -937,7 +941,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 23 )
+group = SubResource( 41 )
 text = "50%"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
@@ -948,7 +952,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 23 )
+group = SubResource( 41 )
 text = "60%"
 
 [node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
@@ -959,7 +963,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 23 )
+group = SubResource( 41 )
 text = "70%"
 
 [node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
@@ -970,7 +974,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 23 )
+group = SubResource( 41 )
 text = "80%"
 
 [node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
@@ -981,7 +985,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 23 )
+group = SubResource( 41 )
 text = "90%"
 
 [node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q6/HBoxContainer"]
@@ -992,7 +996,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 23 )
+group = SubResource( 41 )
 text = "100%"
 
 [node name="Q7" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -1030,7 +1034,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 24 )
+group = SubResource( 42 )
 text = "0%"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
@@ -1041,7 +1045,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 24 )
+group = SubResource( 42 )
 text = "10%"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
@@ -1052,7 +1056,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 24 )
+group = SubResource( 42 )
 text = "20%"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
@@ -1063,7 +1067,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 24 )
+group = SubResource( 42 )
 text = "30%"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
@@ -1074,7 +1078,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 24 )
+group = SubResource( 42 )
 text = "40%"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
@@ -1085,7 +1089,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 24 )
+group = SubResource( 42 )
 text = "50%"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
@@ -1096,7 +1100,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 24 )
+group = SubResource( 42 )
 text = "60%"
 
 [node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
@@ -1107,7 +1111,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 24 )
+group = SubResource( 42 )
 text = "70%"
 
 [node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
@@ -1118,7 +1122,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 24 )
+group = SubResource( 42 )
 text = "80%"
 
 [node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
@@ -1129,7 +1133,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 24 )
+group = SubResource( 42 )
 text = "90%"
 
 [node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q7/HBoxContainer"]
@@ -1140,7 +1144,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 24 )
+group = SubResource( 42 )
 text = "100%"
 
 [node name="Q8" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -1178,7 +1182,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 25 )
+group = SubResource( 43 )
 text = "0%"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
@@ -1189,7 +1193,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 25 )
+group = SubResource( 43 )
 text = "10%"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
@@ -1200,7 +1204,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 25 )
+group = SubResource( 43 )
 text = "20%"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
@@ -1211,7 +1215,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 25 )
+group = SubResource( 43 )
 text = "30%"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
@@ -1222,7 +1226,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 25 )
+group = SubResource( 43 )
 text = "40%"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
@@ -1233,7 +1237,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 25 )
+group = SubResource( 43 )
 text = "50%"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
@@ -1244,7 +1248,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 25 )
+group = SubResource( 43 )
 text = "60%"
 
 [node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
@@ -1255,7 +1259,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 25 )
+group = SubResource( 43 )
 text = "70%"
 
 [node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
@@ -1266,7 +1270,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 25 )
+group = SubResource( 43 )
 text = "80%"
 
 [node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
@@ -1277,7 +1281,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 25 )
+group = SubResource( 43 )
 text = "90%"
 
 [node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8/HBoxContainer"]
@@ -1288,7 +1292,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 25 )
+group = SubResource( 43 )
 text = "100%"
 
 [node name="Q9" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -1326,8 +1330,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 26 )
-text = "100%"
+group = SubResource( 44 )
+text = "0%"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
 margin_left = 186.0
@@ -1337,8 +1341,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 26 )
-text = "90%"
+group = SubResource( 44 )
+text = "10%"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
 margin_left = 372.0
@@ -1348,8 +1352,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 26 )
-text = "80%"
+group = SubResource( 44 )
+text = "20%"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
 margin_left = 558.0
@@ -1359,8 +1363,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 26 )
-text = "70%"
+group = SubResource( 44 )
+text = "30%"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
 margin_left = 744.0
@@ -1370,8 +1374,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 26 )
-text = "60%"
+group = SubResource( 44 )
+text = "40%"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
 margin_left = 930.0
@@ -1381,7 +1385,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 26 )
+group = SubResource( 44 )
 text = "50%"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
@@ -1392,8 +1396,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 26 )
-text = "40%"
+group = SubResource( 44 )
+text = "60%"
 
 [node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
 margin_left = 1302.0
@@ -1403,8 +1407,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 26 )
-text = "30%"
+group = SubResource( 44 )
+text = "70%"
 
 [node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
 margin_left = 1488.0
@@ -1414,8 +1418,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 26 )
-text = "20%"
+group = SubResource( 44 )
+text = "80%"
 
 [node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
 margin_left = 1674.0
@@ -1425,8 +1429,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 26 )
-text = "10%"
+group = SubResource( 44 )
+text = "90%"
 
 [node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9/HBoxContainer"]
 margin_left = 1860.0
@@ -1436,8 +1440,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 26 )
-text = "0%"
+group = SubResource( 44 )
+text = "100%"
 
 [node name="Q10" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
 margin_top = 1890.0
@@ -1474,7 +1478,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 27 )
+group = SubResource( 45 )
 text = "0%"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
@@ -1485,7 +1489,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 27 )
+group = SubResource( 45 )
 text = "10%"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
@@ -1496,7 +1500,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 27 )
+group = SubResource( 45 )
 text = "20%"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
@@ -1507,7 +1511,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 27 )
+group = SubResource( 45 )
 text = "30%"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
@@ -1518,7 +1522,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 27 )
+group = SubResource( 45 )
 text = "40%"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
@@ -1529,7 +1533,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 27 )
+group = SubResource( 45 )
 text = "50%"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
@@ -1540,7 +1544,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 27 )
+group = SubResource( 45 )
 text = "60%"
 
 [node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
@@ -1551,7 +1555,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 27 )
+group = SubResource( 45 )
 text = "70%"
 
 [node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
@@ -1562,7 +1566,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 27 )
+group = SubResource( 45 )
 text = "80%"
 
 [node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
@@ -1573,7 +1577,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 27 )
+group = SubResource( 45 )
 text = "90%"
 
 [node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10/HBoxContainer"]
@@ -1584,7 +1588,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 27 )
+group = SubResource( 45 )
 text = "100%"
 
 [node name="Q11" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -1622,8 +1626,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 28 )
-text = "100%"
+group = SubResource( 46 )
+text = "0%"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
 margin_left = 186.0
@@ -1633,8 +1637,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 28 )
-text = "90%"
+group = SubResource( 46 )
+text = "10%"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
 margin_left = 372.0
@@ -1644,8 +1648,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 28 )
-text = "80%"
+group = SubResource( 46 )
+text = "30%"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
 margin_left = 558.0
@@ -1655,8 +1659,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 28 )
-text = "70%"
+group = SubResource( 46 )
+text = "30%"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
 margin_left = 744.0
@@ -1666,8 +1670,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 28 )
-text = "60%"
+group = SubResource( 46 )
+text = "40%"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
 margin_left = 930.0
@@ -1677,7 +1681,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 28 )
+group = SubResource( 46 )
 text = "50%"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
@@ -1688,8 +1692,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 28 )
-text = "40%"
+group = SubResource( 46 )
+text = "60%"
 
 [node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
 margin_left = 1302.0
@@ -1699,8 +1703,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 28 )
-text = "30%"
+group = SubResource( 46 )
+text = "70%"
 
 [node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
 margin_left = 1488.0
@@ -1710,8 +1714,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 28 )
-text = "20%"
+group = SubResource( 46 )
+text = "80%"
 
 [node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
 margin_left = 1674.0
@@ -1721,8 +1725,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 28 )
-text = "10%"
+group = SubResource( 46 )
+text = "90%"
 
 [node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11/HBoxContainer"]
 margin_left = 1860.0
@@ -1732,8 +1736,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 28 )
-text = "0%"
+group = SubResource( 46 )
+text = "100%"
 
 [node name="Q12" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
 margin_top = 2310.0
@@ -1770,7 +1774,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 29 )
+group = SubResource( 47 )
 text = "0%"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
@@ -1781,7 +1785,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 29 )
+group = SubResource( 47 )
 text = "10%"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
@@ -1792,7 +1796,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 29 )
+group = SubResource( 47 )
 text = "20%"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
@@ -1803,7 +1807,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 29 )
+group = SubResource( 47 )
 text = "30%"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
@@ -1814,7 +1818,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 29 )
+group = SubResource( 47 )
 text = "40%"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
@@ -1825,7 +1829,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 29 )
+group = SubResource( 47 )
 text = "50%"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
@@ -1836,7 +1840,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 29 )
+group = SubResource( 47 )
 text = "60%"
 
 [node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
@@ -1847,7 +1851,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 29 )
+group = SubResource( 47 )
 text = "70%"
 
 [node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
@@ -1858,7 +1862,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 29 )
+group = SubResource( 47 )
 text = "80%"
 
 [node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
@@ -1869,7 +1873,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 29 )
+group = SubResource( 47 )
 text = "90%"
 
 [node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12/HBoxContainer"]
@@ -1880,7 +1884,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 29 )
+group = SubResource( 47 )
 text = "100%"
 
 [node name="Q13" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -1918,7 +1922,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 30 )
+group = SubResource( 48 )
 text = "0%"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
@@ -1929,7 +1933,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 30 )
+group = SubResource( 48 )
 text = "10%"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
@@ -1940,7 +1944,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 30 )
+group = SubResource( 48 )
 text = "20%"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
@@ -1951,7 +1955,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 30 )
+group = SubResource( 48 )
 text = "30%"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
@@ -1962,7 +1966,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 30 )
+group = SubResource( 48 )
 text = "40%"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
@@ -1973,7 +1977,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 30 )
+group = SubResource( 48 )
 text = "50%"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
@@ -1984,7 +1988,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 30 )
+group = SubResource( 48 )
 text = "60%"
 
 [node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
@@ -1995,7 +1999,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 30 )
+group = SubResource( 48 )
 text = "70%"
 
 [node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
@@ -2006,7 +2010,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 30 )
+group = SubResource( 48 )
 text = "80%"
 
 [node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
@@ -2017,7 +2021,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 30 )
+group = SubResource( 48 )
 text = "90%"
 
 [node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13/HBoxContainer"]
@@ -2028,7 +2032,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 30 )
+group = SubResource( 48 )
 text = "100%"
 
 [node name="Q14" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
@@ -2066,8 +2070,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 31 )
-text = "100%"
+group = SubResource( 49 )
+text = "0%"
 
 [node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
 margin_left = 186.0
@@ -2077,8 +2081,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 31 )
-text = "90%"
+group = SubResource( 49 )
+text = "10%"
 
 [node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
 margin_left = 372.0
@@ -2088,8 +2092,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 31 )
-text = "80%"
+group = SubResource( 49 )
+text = "20%"
 
 [node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
 margin_left = 558.0
@@ -2099,8 +2103,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 31 )
-text = "70%"
+group = SubResource( 49 )
+text = "30%"
 
 [node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
 margin_left = 744.0
@@ -2110,8 +2114,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 31 )
-text = "60%"
+group = SubResource( 49 )
+text = "40%"
 
 [node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
 margin_left = 930.0
@@ -2121,7 +2125,7 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 31 )
+group = SubResource( 49 )
 text = "50%"
 
 [node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
@@ -2132,8 +2136,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 31 )
-text = "40%"
+group = SubResource( 49 )
+text = "60%"
 
 [node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
 margin_left = 1302.0
@@ -2143,8 +2147,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 31 )
-text = "30%"
+group = SubResource( 49 )
+text = "70%"
 
 [node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
 margin_left = 1488.0
@@ -2154,8 +2158,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 31 )
-text = "20%"
+group = SubResource( 49 )
+text = "80%"
 
 [node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
 margin_left = 1674.0
@@ -2165,8 +2169,8 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 31 )
-text = "10%"
+group = SubResource( 49 )
+text = "90%"
 
 [node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14/HBoxContainer"]
 margin_left = 1860.0
@@ -2176,8 +2180,304 @@ rect_min_size = Vector2( 180, 0 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 3 )
 toggle_mode = true
-group = SubResource( 31 )
+group = SubResource( 49 )
+text = "100%"
+
+[node name="Q15" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+margin_top = 2940.0
+margin_right = 2040.0
+margin_bottom = 3120.0
+rect_min_size = Vector2( 0, 180 )
+rect_pivot_offset = Vector2( -407, -238 )
+
+[node name="Label" type="Label" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15"]
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 35 )
+text = "15. Have integrity"
+
+[node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15"]
+margin_top = 64.0
+margin_right = 2040.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15"]
+margin_top = 88.0
+margin_right = 2040.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 60 )
+custom_constants/separation = 6
+
+[node name="Button" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15/HBoxContainer"]
+margin_right = 180.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 50 )
 text = "0%"
+
+[node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15/HBoxContainer"]
+margin_left = 186.0
+margin_right = 366.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 50 )
+text = "10%"
+
+[node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15/HBoxContainer"]
+margin_left = 372.0
+margin_right = 552.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 50 )
+text = "20%"
+
+[node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15/HBoxContainer"]
+margin_left = 558.0
+margin_right = 738.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 50 )
+text = "30%"
+
+[node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15/HBoxContainer"]
+margin_left = 744.0
+margin_right = 924.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 50 )
+text = "40%"
+
+[node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15/HBoxContainer"]
+margin_left = 930.0
+margin_right = 1110.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 50 )
+text = "50%"
+
+[node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15/HBoxContainer"]
+margin_left = 1116.0
+margin_right = 1296.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 50 )
+text = "60%"
+
+[node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15/HBoxContainer"]
+margin_left = 1302.0
+margin_right = 1482.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 50 )
+text = "70%"
+
+[node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15/HBoxContainer"]
+margin_left = 1488.0
+margin_right = 1668.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 50 )
+text = "80%"
+
+[node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15/HBoxContainer"]
+margin_left = 1674.0
+margin_right = 1854.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 50 )
+text = "90%"
+
+[node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15/HBoxContainer"]
+margin_left = 1860.0
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 50 )
+text = "100%"
+
+[node name="Q16" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+margin_top = 3150.0
+margin_right = 2040.0
+margin_bottom = 3330.0
+rect_min_size = Vector2( 0, 180 )
+rect_pivot_offset = Vector2( -407, -238 )
+
+[node name="Label" type="Label" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16"]
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 35 )
+text = "16. Act as part of the team"
+
+[node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16"]
+margin_top = 64.0
+margin_right = 2040.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16"]
+margin_top = 88.0
+margin_right = 2040.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 60 )
+custom_constants/separation = 6
+
+[node name="Button" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16/HBoxContainer"]
+margin_right = 180.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 51 )
+text = "0%"
+
+[node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16/HBoxContainer"]
+margin_left = 186.0
+margin_right = 366.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 51 )
+text = "10%"
+
+[node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16/HBoxContainer"]
+margin_left = 372.0
+margin_right = 552.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 51 )
+text = "20%"
+
+[node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16/HBoxContainer"]
+margin_left = 558.0
+margin_right = 738.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 51 )
+text = "30%"
+
+[node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16/HBoxContainer"]
+margin_left = 744.0
+margin_right = 924.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 51 )
+text = "40%"
+
+[node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16/HBoxContainer"]
+margin_left = 930.0
+margin_right = 1110.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 51 )
+text = "50%"
+
+[node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16/HBoxContainer"]
+margin_left = 1116.0
+margin_right = 1296.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 51 )
+text = "60%"
+
+[node name="Button8" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16/HBoxContainer"]
+margin_left = 1302.0
+margin_right = 1482.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 51 )
+text = "70%"
+
+[node name="Button9" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16/HBoxContainer"]
+margin_left = 1488.0
+margin_right = 1668.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 51 )
+text = "80%"
+
+[node name="Button10" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16/HBoxContainer"]
+margin_left = 1674.0
+margin_right = 1854.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 51 )
+text = "90%"
+
+[node name="Button11" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16/HBoxContainer"]
+margin_left = 1860.0
+margin_right = 2040.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 180, 0 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+group = SubResource( 51 )
+text = "100%"
 
 [node name="Continue" type="CenterContainer" parent="ColorRect"]
 anchor_left = 0.5
@@ -2237,7 +2537,7 @@ margin_top = 424.0
 margin_right = 2048.0
 margin_bottom = 521.0
 custom_fonts/font = SubResource( 16 )
-text = "Thank you very much !"
+text = "Thank you very much!"
 align = 1
 valign = 1
 
