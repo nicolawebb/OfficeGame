@@ -62,6 +62,8 @@ var robot_server
 
 var debug = false
 
+var robot_visible
+
 
 
 onready var navmesh = $MainOffice.get_navmesh()
@@ -775,7 +777,7 @@ func create_file(id):
 	
 	var data_to_send = {
 			"file_name": file_name,
-			"header": "time,player_x,player_y,player_rotation,robot_x,robot_y,robot_rotation,fire_canteen,fire_HR,fire_manager,fire_lounge,fire_warehouse,fire_restroom,fireA_chair,fireA_printer,fireA_bin,fireA_table,robot_call",
+			"header": "time,player_x,player_y,player_rotation,robot_x,robot_y,robot_rotation,fire_canteen,fire_HR,fire_manager,fire_lounge,fire_warehouse,fire_restroom,fireA_chair,fireA_printer,fireA_bin,fireA_table,robot_call,fps,robotvisible",
 		}
 
 	# Convert data to JSON string
@@ -853,8 +855,11 @@ func log_positions(id):
 	$FireGroup_after/Printer/fire/flames.emitting,  # fireA_printer
 	$FireGroup_after/Bin/fire/flames.emitting,  # fireA_bin
 	$FireGroup_after/Table/fire/flames.emitting,  # fireA_table
-	ChatLabel.text  # robot_call
+	ChatLabel.text,  # robot_call
+	Performance.get_monitor(Performance.TIME_FPS),
+	robot_visible
 ]
+		print(data)
 #		var data = [formatted_time, p.global_transform.origin.x, p.global_transform.origin.z, p.rotation_degrees.y, $RobotPath/PathFollow/Robot.global_transform.origin.x, $RobotPath/PathFollow/Robot.global_transform.origin.z, $RobotPath/PathFollow/Robot.rotation_degrees.y, $FireGroup/Canteen/fire/flames.emitting, $FireGroup/HRdep/fire/flames.emitting, $FireGroup/Manager/fire/flames.emitting, $FireGroup/Lounge/fire/flames.emitting, $FireGroup/Warehouse/fire/flames.emitting, $FireGroup/Restroom/fire/flames.emitting, $FireGroup_after/Lazychair/fire/flames.emitting, $FireGroup_after/Printer/fire/flames.emitting, $FireGroup_after/Bin/fire/flames.emitting, $FireGroup_after/Table/fire/flames.emitting, ChatLabel.text]
 		
 		# Log data for each player
@@ -891,7 +896,7 @@ func send_data_to_server(id, data, use_ssl=false):
 			continue
 
 		yield(http_request, "request_completed")
-		print("Data sent to the server for player ID %s." % id)
+#		print("Data sent to the server for player ID %s." % id)
 
 
 func _on_nag_completed(answer_data, use_ssl=false):
@@ -928,7 +933,16 @@ func _on_nag_completed(answer_data, use_ssl=false):
 		print("Data sent to the server for player ID %s." % id)
 
 
+func _on_VisibilityNotifier_screen_entered():
+	print("entered screen")
+	robot_visible = true
 
+
+func _on_VisibilityNotifier_screen_exited():
+	print("exited screen")
+	robot_visible = false	
+
+	
 # for each player, this function will create and save a string on a csv file with the position, orientation and expression of the player
  
 #func pre_save(): 
@@ -1071,4 +1085,8 @@ func update_players_proximity():
 		if GameState.mode == GameState.STANDALONE:
 			local_player.puppet_update_players_in_range(proximity[p]["in_range"],proximity[p]["not_in_range"])
 	
+
+
+
+
 
