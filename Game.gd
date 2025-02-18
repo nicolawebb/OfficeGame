@@ -27,7 +27,7 @@ var SERVER_PORT=6969 # only used for the server -- the client will always connec
 var time_start=0 
 var time_now=0
 
-
+var prolific_id
 
 var is_networking_started
 
@@ -625,8 +625,22 @@ var LOGGING_PERIOD=1.0 #s
 
 
 func _on_InfoCollect_infocollected(data):
-	assign_random_ids_to_players(data)
+	prolific_id = data[0].split(",")[0]
+	print(prolific_id)  # Output: ewsragsergserg
 
+#	assign_random_ids_to_players(data)
+	create_d_file(prolific_id, data)
+
+func assign_random_ids_to_players(answer_data):
+	print(answer_data)
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	
+	for player in $Players.get_children():
+		player.player_id = rng.randi()
+		print("Assigned ID:", player.player_id, "to player:", player.name)
+#		create_q_file(player.player_id ,answer_data)
+		create_d_file(player.player_id ,answer_data)
 
 func _on_QNbefore_completed(answer_data):
 	create_q_file(answer_data)
@@ -640,11 +654,11 @@ func _on_QNafter_completed(answer_data, count):
 var URL_LOGS = "http://109.228.57.101/cgi-bin/save_game_data.py"  # Server URL where the script is located
 
 func create_d_file(id, answer_data, use_ssl=false):
-	var file_name = "%s_demographic.csv" % id  # File name for each player
+	var file_name = "%s_demographic.csv" % prolific_id  # File name for each player
 	print("File Name Q: %s" % file_name)
 	var data = {
 		"file_name": file_name,
-		"id": id,
+		"id": prolific_id,
 		"answers": answer_data
 	}
 	
@@ -672,7 +686,8 @@ func create_d_file(id, answer_data, use_ssl=false):
 func create_q_file(answer_data, use_ssl=false):
 	
 	for player in $Players.get_children():
-		var id = player.player_id
+		print("PLEASE GOD WORK:", prolific_id)
+		var id = prolific_id
 		var file_name = "%s_questionnaire1.csv" % id  # File name for each player
 		print("File Name Q: %s" % file_name)
 		
@@ -709,7 +724,7 @@ func create_q2_file(answer_data, count, use_ssl=false):
 	var questionnaire_type = "questionnaire2" if count == 1 else "questionnaire3"
 	print(count)
 	for player in $Players.get_children():
-		var id = player.player_id
+		var id = prolific_id
 		var file_name = "%s_%s.csv" % [id, questionnaire_type]
 		print("File Name: %s" % file_name)
 
@@ -742,24 +757,15 @@ func create_q2_file(answer_data, count, use_ssl=false):
 
 
 
-func assign_random_ids_to_players(answer_data):
-	print(answer_data)
-	var rng = RandomNumberGenerator.new()
-	rng.randomize()
-	
-	for player in $Players.get_children():
-		player.player_id = rng.randi()
-		print("Assigned ID:", player.player_id, "to player:", player.name)
-#		create_q_file(player.player_id ,answer_data)
-		create_d_file(player.player_id ,answer_data)
 		
 
 func _on_TrainArea_tp(origin, basis):
-	var id = yield($CanvasLayer/QNbefore, "completed")
+#	var id = yield($CanvasLayer/QNbefore, "completed")
+	var id = prolific_id
 #	print("ID: ", id)
 	for player in $Players.get_children():
-		create_file(player.player_id)
-		start_recording_gamedata(player.player_id)
+		create_file(prolific_id)
+		start_recording_gamedata(prolific_id)
 #	connect("game_over", self, "_on_CheckPoint_game_over")	
 
 	# Create a file and add the first line: the user ID and headers

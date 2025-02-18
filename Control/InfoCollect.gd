@@ -6,6 +6,7 @@ onready var continue_button = $CenterContainer/VBoxContainer/Continue/Button
 onready var Ledit3 = $CenterContainer/VBoxContainer/HBoxContainer2/Age
 onready var Age_warning = $CenterContainer/VBoxContainer/HBoxContainer3/CenterContainer/Age_warning
 
+onready var prolific_id = $CenterContainer/VBoxContainer/HBoxContainer2/prolificid
 onready var Obutton1 = $CenterContainer/VBoxContainer/HBoxContainer2/Gender
 onready var Obutton2 = $CenterContainer/VBoxContainer/Q1/Know
 onready var Obutton3 = $CenterContainer/VBoxContainer/Q2/Know2
@@ -46,7 +47,7 @@ func _on_continue():
 #	else:
 #		player_name = Ledit1.text + " " + Ledit2.text
 	
-	var text_data = Obutton1.get_item_text(Obutton1.selected) + "," + Ledit3.text + "," + Obutton2.get_item_text(Obutton2.selected) + "," + Obutton3.get_item_text(Obutton3.selected) + "\n"
+	var text_data = prolific_id.text  + "," + Obutton1.get_item_text(Obutton1.selected) + "," + Ledit3.text + "," + Obutton2.get_item_text(Obutton2.selected) + "," + Obutton3.get_item_text(Obutton3.selected) + "\n"
 	
 	# Append text_data to the list
 	text_data_list.append(text_data)
@@ -116,7 +117,7 @@ func _on_Button_pressed():
 #	else:
 #		player_name = Ledit1.text + " " + Ledit2.text
 	
-	var text_data = Obutton1.get_item_text(Obutton1.selected) + "," + Ledit3.text + "," + Obutton2.get_item_text(Obutton2.selected) + "," + Obutton3.get_item_text(Obutton3.selected) + "\n"
+	var text_data = prolific_id.text  + "," + Obutton1.get_item_text(Obutton1.selected) + "," + Ledit3.text + "," + Obutton2.get_item_text(Obutton2.selected) + "," + Obutton3.get_item_text(Obutton3.selected) + "\n"
 	
 	# Append text_data to the list
 	text_data_list.append(text_data)
@@ -142,7 +143,7 @@ func _on_Button2_pressed():
 #	else:
 #		player_name = Ledit1.text + " " + Ledit2.text
 	
-	var text_data = Obutton1.get_item_text(Obutton1.selected) + "," + Ledit3.text + "," + Obutton2.get_item_text(Obutton2.selected) + "," + Obutton3.get_item_text(Obutton3.selected) + "\n"
+	var text_data = prolific_id.text  + "," + Obutton1.get_item_text(Obutton1.selected) + "," + Ledit3.text + "," + Obutton2.get_item_text(Obutton2.selected) + "," + Obutton3.get_item_text(Obutton3.selected) + "\n"
 	
 	# Append text_data to the list
 	text_data_list.append(text_data)

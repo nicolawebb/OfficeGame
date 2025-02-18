@@ -102,19 +102,19 @@ border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
 
-[sub_resource type="DynamicFontData" id=22]
+[sub_resource type="DynamicFontData" id=40]
 font_path = "res://Times New Roman.ttf"
 
 [sub_resource type="DynamicFont" id=23]
 size = 38
-font_data = SubResource( 22 )
+font_data = SubResource( 40 )
 
-[sub_resource type="DynamicFontData" id=38]
+[sub_resource type="DynamicFontData" id=41]
 font_path = "res://Times New Roman.ttf"
 
 [sub_resource type="DynamicFont" id=39]
 size = 48
-font_data = SubResource( 38 )
+font_data = SubResource( 41 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -127,26 +127,21 @@ margin_bottom = 1200.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-margin_top = 50.0
+margin_top = 5.0
 margin_right = 2052.0
-margin_bottom = 1134.0
+margin_bottom = 1196.0
 rect_min_size = Vector2( 0, 400 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_top = 42.0
-margin_right = 2052.0
-margin_bottom = 1042.0
-rect_min_size = Vector2( 2048, 1000 )
-
-[node name="Control" type="Control" parent="CenterContainer/VBoxContainer"]
-margin_right = 2052.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 2048, 100 )
+margin_left = 2.0
+margin_top = 95.0
+margin_right = 2050.0
+margin_bottom = 1095.0
+rect_min_size = Vector2( 2047.96, 1000 )
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
-margin_top = 104.0
-margin_right = 2052.0
-margin_bottom = 204.0
+margin_right = 2048.0
+margin_bottom = 100.0
 rect_min_size = Vector2( 2048, 100 )
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
@@ -172,15 +167,9 @@ align = 1
 items = [ "", null, false, 1, null, "Male", null, false, 2, null, "Female", null, false, 3, null, "Other", null, false, 3, null, "Prefer not to say", null, false, 4, null ]
 selected = 0
 
-[node name="Control" type="Control" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
 margin_left = 708.0
 margin_right = 1108.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 400, 100 )
-
-[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
-margin_left = 1112.0
-margin_right = 1512.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 400, 100 )
 custom_fonts/font = SubResource( 13 )
@@ -189,27 +178,45 @@ align = 1
 valign = 1
 
 [node name="Age" type="LineEdit" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
-margin_left = 1516.0
-margin_right = 1816.0
+margin_left = 1112.0
+margin_right = 1242.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+custom_fonts/font = SubResource( 33 )
+align = 1
+
+[node name="Label3" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 1246.0
+margin_right = 1646.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 400, 100 )
+custom_fonts/font = SubResource( 13 )
+text = "Prolific ID:"
+align = 1
+valign = 1
+
+[node name="prolificid" type="LineEdit" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 1650.0
+margin_right = 1950.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 300, 100 )
 custom_fonts/font = SubResource( 33 )
 align = 1
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
-margin_top = 208.0
-margin_right = 2052.0
-margin_bottom = 308.0
+margin_top = 104.0
+margin_right = 2048.0
+margin_bottom = 204.0
 rect_min_size = Vector2( 0, 100 )
 
 [node name="Control" type="Control" parent="CenterContainer/VBoxContainer/HBoxContainer3"]
-margin_right = 1100.0
+margin_right = 500.0
 margin_bottom = 100.0
-rect_min_size = Vector2( 1100, 0 )
+rect_min_size = Vector2( 500, 0 )
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/HBoxContainer3"]
-margin_left = 1104.0
-margin_right = 2052.0
+margin_left = 504.0
+margin_right = 1452.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 948, 0 )
 
@@ -223,13 +230,13 @@ text = "Please enter a number between 10 to 80"
 align = 1
 
 [node name="Q1" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
-margin_top = 312.0
-margin_right = 2052.0
-margin_bottom = 562.0
+margin_top = 208.0
+margin_right = 2048.0
+margin_bottom = 458.0
 rect_min_size = Vector2( 2048, 250 )
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/Q1"]
-margin_right = 2052.0
+margin_right = 2048.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 0, 100 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -242,7 +249,7 @@ valign = 1
 
 [node name="Know" type="OptionButton" parent="CenterContainer/VBoxContainer/Q1"]
 margin_top = 104.0
-margin_right = 2052.0
+margin_right = 2048.0
 margin_bottom = 154.0
 rect_min_size = Vector2( 0, 50 )
 theme = ExtResource( 5 )
@@ -255,13 +262,13 @@ items = [ "", null, false, 1, null, "Familiar", null, false, 2, null, "A little"
 selected = 0
 
 [node name="Q2" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
-margin_top = 566.0
-margin_right = 2052.0
-margin_bottom = 816.0
+margin_top = 462.0
+margin_right = 2048.0
+margin_bottom = 712.0
 rect_min_size = Vector2( 2048, 250 )
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/Q2"]
-margin_right = 2052.0
+margin_right = 2048.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 0, 100 )
 custom_fonts/font = SubResource( 21 )
@@ -271,7 +278,7 @@ valign = 1
 
 [node name="Know2" type="OptionButton" parent="CenterContainer/VBoxContainer/Q2"]
 margin_top = 104.0
-margin_right = 2052.0
+margin_right = 2048.0
 margin_bottom = 154.0
 rect_min_size = Vector2( 0, 50 )
 theme = ExtResource( 5 )
@@ -284,9 +291,9 @@ items = [ "", null, false, 1, null, "Working/living with robots", null, false, 2
 selected = 0
 
 [node name="Continue" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
-margin_top = 820.0
-margin_right = 2052.0
-margin_bottom = 880.0
+margin_top = 716.0
+margin_right = 2048.0
+margin_bottom = 776.0
 __meta__ = {
 "_edit_use_anchors_": true,
 "_editor_description_": "Continue"
@@ -294,8 +301,8 @@ __meta__ = {
 
 [node name="Button" type="Button" parent="CenterContainer/VBoxContainer/Continue"]
 visible = false
-margin_left = 950.0
-margin_right = 1102.0
+margin_left = 948.0
+margin_right = 1100.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 custom_fonts/font = SubResource( 23 )
@@ -307,8 +314,8 @@ align = 2
 expand_icon = true
 
 [node name="Button2" type="Button" parent="CenterContainer/VBoxContainer/Continue"]
-margin_left = 932.0
-margin_right = 1119.0
+margin_left = 930.0
+margin_right = 1117.0
 margin_bottom = 60.0
 custom_fonts/font = SubResource( 39 )
 text = "Continue"
