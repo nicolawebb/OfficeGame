@@ -1,4 +1,4 @@
-[gd_scene load_steps=104 format=2]
+[gd_scene load_steps=102 format=2]
 
 [ext_resource path="res://GameModeSelection.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Game.gd" type="Script" id=2]
@@ -13,7 +13,6 @@
 [ext_resource path="res://assets/white.png" type="Texture" id=11]
 [ext_resource path="res://assets/vignette.png" type="Texture" id=12]
 [ext_resource path="res://vignette.shader" type="Shader" id=13]
-[ext_resource path="res://assets/Mat3d66-1092598-40-8998.material" type="Material" id=14]
 [ext_resource path="res://assets/smoke.png" type="Texture" id=15]
 [ext_resource path="res://assets/fire_02.png" type="Texture" id=16]
 [ext_resource path="res://assets/smoke_01.png" type="Texture" id=17]
@@ -398,15 +397,9 @@ color_ramp = SubResource( 16 )
 
 [sub_resource type="Curve3D" id=26]
 _data = {
-"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 28.948, 4.45561, -16.6698, 0.0348034, 0, -0.257293, -0.0348034, 0, 0.257293, 28.8685, 4.45561, -12.8017, 0, 0, 0, 0, 0, 0, 27.875, 4.45561, -9.92708, 0.0704651, 0, -0.215611, -0.0704651, 0, 0.215611, 26.6695, 4.45561, -8.03274, 0, 0, 0, 0, 0, 0, 26.4756, 4.45561, -7.09224, 0, 0, 0, 0, 0, 0, 26.3292, 4.45561, -6.12602, 0, 0, 0, 0, 0, 0, 26.2706, 4.45561, -5.20373, 0, 0, 0, 0, 0, 0, 26.256, 4.45561, -3.59336, 0, 0, 0, 0, 0, 0, 26.1974, 4.45561, -2.49539, 0.402939, 0, -0.414225, -0.402939, 0, 0.414225, 25.8607, 4.45561, -2.01228, 0, 0, 0, 0, 0, 0, 25.1141, 4.45561, -1.42669, 0, 0, 0, 0, 0, 0, 24.3382, 4.45561, -1.2071, 0, 0, 0, 0, 0, 0, 23.1963, 4.45561, -1.0607, 0, 0, 0, 0, 0, 0, 21.8641, 4.45561, -1.03142, 0, 0, 0, 0, 0, 0, 19.6388, 4.45561, -1.17782, 0, 0, 0, 0, 0, 0, 18.2774, 4.45561, -1.07534, 0.364067, 0, -0.0351359, -0.364067, 0, 0.0351359, 16.828, 4.45561, -0.562952, 0.803989, 0, 0.0362016, -0.803989, 0, -0.0362016, 15.2762, 4.45561, -0.445835, 0, 0, 0, 0, 0, 0, 12.3629, 4.45561, -1.26566, 0, 0, 0, 0, 0, 0, 10.8111, 4.45561, -2.26115, 0, 0, 0, 0, 0, 0, 10.4629, 4.45561, -2.40465, 0, 0, 0, 0, 0, 0, 9.05436, 4.45561, -2.39291, 0, 0, 0, 0, 0, 0, 7.84966, 4.45561, -2.15273, 0, 0, 0, 0, 0, 0, 6.75169, 4.45561, -2.15273, 0, 0, 0, 0, 0, 0, 5.21453, 4.45561, -2.13809, 0, 0, 0, 0, 0, 0, 3.99943, 4.45561, -2.06489, 0.177731, 0, 0.231177, -0.177731, 0, -0.231177, 3.0625, 4.45561, -2.16737, 0.042202, 0, 0.213447, -0.042202, 0, -0.213447, 2.93074, 4.45561, -3.45566, 0, 0, 0, 0, 0, 0, 2.50619, 4.45561, -4.30476, 0, 0, 0, 0, 0, 0, 2.2134, 4.45561, -5.73944, 0, 0, 0, 0, 0, 0, 2.38907, 4.45561, -6.9399, 0, 0, 0, 0, 0, 0, 2.38271, 4.45561, -8.4213, 0, 0, 0, 0, 0, 0, 2.28024, 4.45561, -9.94383 ),
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 28.948, 4.45561, -16.6698, 0.0348034, 0, -0.257293, -0.0348034, 0, 0.257293, 28.8685, 4.45561, -12.8017, 0, 0, 0, 0, 0, 0, 27.875, 4.45561, -9.92708, 0.0704651, 0, -0.215611, -0.0704651, 0, 0.215611, 26.6695, 4.45561, -8.03274, 0, 0, 0, 0, 0, 0, 26.4756, 4.45561, -7.09224, 0, 0, 0, 0, 0, 0, 26.3292, 4.45561, -6.12602, 0, 0, 0, 0, 0, 0, 26.2706, 4.45561, -5.20373, 0, 0, 0, 0, 0, 0, 26.256, 4.45561, -3.59336, 0, 0, 0, 0, 0, 0, 26.1974, 4.45561, -2.49539, 0.402939, 0, -0.414225, -0.402939, 0, 0.414225, 25.8607, 4.45561, -2.01228, 0, 0, 0, 0, 0, 0, 25.1141, 4.45561, -1.42669, 0, 0, 0, 0, 0, 0, 24.3382, 4.45561, -1.2071, 0, 0, 0, 0, 0, 0, 23.1963, 4.45561, -1.0607, 0, 0, 0, 0, 0, 0, 21.8641, 4.45561, -1.03142, 0, 0, 0, 0, 0, 0, 19.6388, 4.45561, -1.17782, 0, 0, 0, 0, 0, 0, 18.2774, 4.45561, -1.07534, 0.364067, 0, -0.0351359, -0.364067, 0, 0.0351359, 16.828, 4.45561, -0.562952, 0.803989, 0, 0.0362016, -0.803989, 0, -0.0362016, 15.2762, 4.45561, -0.445835, 0, 0, 0, 0, 0, 0, 12.3629, 4.45561, -1.26566, 0, 0, 0, 0, 0, 0, 10.8111, 4.45561, -2.26115, 0, 0, 0, 0, 0, 0, 10.4629, 4.45561, -2.40465, 0, 0, 0, 0, 0, 0, 9.05436, 4.45561, -2.39291, 0, 0, 0, 0, 0, 0, 7.84966, 4.45561, -2.15273, 0, 0, 0, 0, 0, 0, 6.5183, 4.59622, -2.12656, 0, 0, 0, 0, 0, 0, 5.21453, 4.45561, -2.13809, 0, 0, 0, 0, 0, 0, 3.99943, 4.45561, -2.06489, 0.177731, 0, 0.231177, -0.177731, 0, -0.231177, 3.0625, 4.45561, -2.16737, 0.042202, 0, 0.213447, -0.042202, 0, -0.213447, 2.93074, 4.45561, -3.45566, 0, 0, 0, 0, 0, 0, 2.50619, 4.45561, -4.30476, 0, 0, 0, 0, 0, 0, 2.2134, 4.45561, -5.73944, 0, 0, 0, 0, 0, 0, 2.38907, 4.45561, -6.9399, 0, 0, 0, 0, 0, 0, 2.38271, 4.45561, -8.4213, 0, 0, 0, 0, 0, 0, 2.28024, 4.45561, -9.94383 ),
 "tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
 }
-
-[sub_resource type="Skin" id=60]
-bind_count = 1
-bind/0/name = ""
-bind/0/bone = -1
-bind/0/pose = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [sub_resource type="SpatialMaterial" id=33]
 flags_transparent = true
@@ -724,7 +717,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.427, 0, -1.33055 )
 curve = SubResource( 3 )
 
 [node name="NPC2" parent="NPCPath/NPCPath2" instance=ExtResource( 7 )]
-transform = Transform( 0.990202, 0, 0.139639, 0, 1, 0, -0.139646, 0, 0.990153, 4.22644, 0, 0.860942 )
+transform = Transform( 0.990202, 0, 0.139639, 0, 1, 0, -0.139646, 0, 0.990151, 4.22644, 0, 0.860942 )
 
 [node name="NPCPath3" type="Path" parent="NPCPath"]
 curve = SubResource( 4 )
@@ -820,13 +813,14 @@ script = ExtResource( 48 )
 [node name="RobotMesh" type="MeshInstance" parent="RobotPath/PathFollow/Robot"]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
 mesh = ExtResource( 51 )
-skin = SubResource( 60 )
 skeleton = NodePath("../..")
-material/0 = ExtResource( 14 )
 material/1 = ExtResource( 19 )
 material/2 = ExtResource( 19 )
 material/3 = ExtResource( 19 )
 material/4 = ExtResource( 19 )
+
+[node name="VisibilityNotifier" type="VisibilityNotifier" parent="RobotPath/PathFollow/Robot/RobotMesh"]
+transform = Transform( 5.00002, 0, 0, 0, 5, 0, 0, 0, 5.00002, -144.741, -2.52805, 83.3493 )
 
 [node name="smoke" type="Particles" parent="RobotPath/PathFollow/Robot/RobotMesh"]
 transform = Transform( -1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 0.233276, 3.05532, 0 )
@@ -847,7 +841,6 @@ bus = "SFX"
 
 [node name="AudioEngine" type="AudioStreamPlayer3D" parent="RobotPath/PathFollow/Robot/RobotMesh"]
 stream = ExtResource( 8 )
-unit_db = 5.0
 max_db = 6.0
 bus = "SFX"
 
@@ -1181,7 +1174,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.90953, 0 )
 curve = SubResource( 52 )
 
 [node name="NPC1" parent="S2_NPC" instance=ExtResource( 7 )]
-transform = Transform( -0.0212871, 0, 0.999744, 0, 1, 0, -0.999774, 0, -0.0212865, -0.147757, 4.45561, -8.58706 )
+transform = Transform( -0.0212871, 0, 0.999743, 0, 1, 0, -0.999774, 0, -0.0212865, -0.147757, 4.45561, -8.58706 )
 
 [node name="FireGroup_after" type="Spatial" parent="."]
 script = ExtResource( 56 )
@@ -1317,6 +1310,7 @@ shape = SubResource( 58 )
 [node name="RobotStop" type="Position3D" parent="FireGroup_after/Table"]
 transform = Transform( -0.136667, 0, -0.990617, 0, 1, 0, 0.990617, 0, -0.136667, 27.2557, 0.981911, -12.5802 )
 
+[connection signal="completed" from="CanvasLayer/nag" to="." method="_on_nag_completed"]
 [connection signal="all_putOut" from="CanvasLayer/UI" to="CheckPoint" method="_on_UI_all_putOut"]
 [connection signal="completed" from="CanvasLayer/QNafter" to="." method="_on_QNafter_completed"]
 [connection signal="completed" from="CanvasLayer/QNbefore" to="." method="_on_QNbefore_completed"]
@@ -1329,6 +1323,10 @@ transform = Transform( -0.136667, 0, -0.990617, 0, 1, 0, 0.990617, 0, -0.136667,
 [connection signal="body_entered" from="HalfPoint/Area" to="HalfPoint" method="_on_Area_body_entered"]
 [connection signal="body_exited" from="HalfPoint/Area" to="HalfPoint" method="_on_Area_body_exited"]
 [connection signal="timeout" from="timer_save" to="." method="_on_timer_save_timeout"]
+[connection signal="camera_entered" from="RobotPath/PathFollow/Robot/RobotMesh/VisibilityNotifier" to="." method="_on_VisibilityNotifier_camera_entered"]
+[connection signal="camera_exited" from="RobotPath/PathFollow/Robot/RobotMesh/VisibilityNotifier" to="." method="_on_VisibilityNotifier_camera_exited"]
+[connection signal="screen_entered" from="RobotPath/PathFollow/Robot/RobotMesh/VisibilityNotifier" to="." method="_on_VisibilityNotifier_screen_entered"]
+[connection signal="screen_exited" from="RobotPath/PathFollow/Robot/RobotMesh/VisibilityNotifier" to="." method="_on_VisibilityNotifier_screen_exited"]
 [connection signal="body_entered" from="FireGroup/Canteen/Area" to="FireGroup/Canteen" method="_on_Area_body_entered"]
 [connection signal="body_exited" from="FireGroup/Canteen/Area" to="FireGroup/Canteen" method="_on_Area_body_exited"]
 [connection signal="body_entered" from="FireGroup/HRdep/Area" to="FireGroup/HRdep" method="_on_Area_body_entered"]
