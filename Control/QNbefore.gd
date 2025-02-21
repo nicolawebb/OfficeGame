@@ -24,7 +24,9 @@ onready var questions = [
 	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q17/HBoxContainer,
 	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q18/HBoxContainer,
 	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q19/HBoxContainer,
-	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q20/HBoxContainer
+	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q20/HBoxContainer,
+	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q21/HBoxContainer,
+	$ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q22/HBoxContainer
 ]
 onready var InfoCollect = get_node("../InfoCollect")
 signal completed()

@@ -64,6 +64,9 @@ var debug = false
 
 var robot_visible
 
+var pos
+var old_pos
+var moving
 
 
 onready var navmesh = $MainOffice.get_navmesh()
@@ -121,6 +124,13 @@ func _ready():
 	
 	# at that point, we should know our game mode
 	assert(GameState.mode != GameState.UNSET)
+	
+	
+#	****************************
+	old_pos = Vector2(player.global_transform.origin.x, player.global_transform.origin.y)
+	pos = Vector2(player.global_transform.origin.x, player.global_transform.origin.y)
+	print("old_pos: ", old_pos)
+#	****************************
 	
 	
 	set_physics_process(true)
@@ -237,6 +247,8 @@ func _ready():
 		pre_configure_game()
 		
 	yield(get_tree().create_timer(0.5), "timeout")
+	
+
 		
 #	assign_random_ids_to_players()
 
@@ -255,7 +267,13 @@ func configure_physics():
 	
 	
 func _process(_delta):
-	
+	pos = Vector2(player.global_transform.origin.x, player.global_transform.origin.y)
+	if pos != old_pos:
+		moving = true
+	else:
+		moving = false
+	#create old pos from pos
+	old_pos = pos
 
 		
 	if is_networking_started:
@@ -275,6 +293,15 @@ func _process(_delta):
 
 # should only run on the server!
 func _physics_process(_delta):
+	#set pos to current position
+	pos = Vector2(player.global_transform.origin.x, player.global_transform.origin.y)
+	if pos != old_pos:
+		moving = true
+	else:
+		moving = false
+	#create old pos from pos
+	old_pos = pos
+	
 	
 	assert(GameState.mode == GameState.SERVER || GameState.mode == GameState.STANDALONE)
 	if GameState.mode == GameState.SERVER:
@@ -688,7 +715,6 @@ func create_d_file(id, answer_data, use_ssl=false):
 func create_q_file(answer_data, use_ssl=false):
 	
 	for player in $Players.get_children():
-		print("PLEASE GOD WORK:", prolific_id)
 		var id = prolific_id
 		var file_name = "%s_questionnaire1.csv" % id  # File name for each player
 		print("File Name Q: %s" % file_name)
@@ -696,7 +722,7 @@ func create_q_file(answer_data, use_ssl=false):
 		# Prepare the data to be sent as JSON, including the header and answers
 		var data = {
 			"file_name": file_name,
-			"header": "1,2,3,4,5,6,7,8,9,10",
+			"header": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
 			"answers": answer_data
 		}
 		
@@ -777,7 +803,7 @@ func create_file(id):
 	
 	var data_to_send = {
 			"file_name": file_name,
-			"header": "time,player_x,player_y,player_rotation,robot_x,robot_y,robot_rotation,fire_canteen,fire_HR,fire_manager,fire_lounge,fire_warehouse,fire_restroom,fireA_chair,fireA_printer,fireA_bin,fireA_table,robot_call,fps,robotvisible",
+			"header": "time,player_x,player_y,player_rotation,robot_x,robot_y,robot_rotation,fire_canteen,fire_HR,fire_manager,fire_lounge,fire_warehouse,fire_restroom,fireA_chair,fireA_printer,fireA_bin,fireA_table,robot_call,fps,robotvisible,playermoving",
 		}
 
 	# Convert data to JSON string
@@ -857,7 +883,8 @@ func log_positions(id):
 	$FireGroup_after/Table/fire/flames.emitting,  # fireA_table
 	ChatLabel.text,  # robot_call
 	Performance.get_monitor(Performance.TIME_FPS),
-	robot_visible
+	robot_visible,
+	moving
 ]
 		print(data)
 #		var data = [formatted_time, p.global_transform.origin.x, p.global_transform.origin.z, p.rotation_degrees.y, $RobotPath/PathFollow/Robot.global_transform.origin.x, $RobotPath/PathFollow/Robot.global_transform.origin.z, $RobotPath/PathFollow/Robot.rotation_degrees.y, $FireGroup/Canteen/fire/flames.emitting, $FireGroup/HRdep/fire/flames.emitting, $FireGroup/Manager/fire/flames.emitting, $FireGroup/Lounge/fire/flames.emitting, $FireGroup/Warehouse/fire/flames.emitting, $FireGroup/Restroom/fire/flames.emitting, $FireGroup_after/Lazychair/fire/flames.emitting, $FireGroup_after/Printer/fire/flames.emitting, $FireGroup_after/Bin/fire/flames.emitting, $FireGroup_after/Table/fire/flames.emitting, ChatLabel.text]

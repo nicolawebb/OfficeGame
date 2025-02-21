@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Control/QNbefore.gd" type="Script" id=2]
 [ext_resource path="res://default_theme.tres" type="Theme" id=3]
@@ -36,6 +36,8 @@ default_font = ExtResource( 4 )
 
 [sub_resource type="ButtonGroup" id=6]
 
+[sub_resource type="ButtonGroup" id=31]
+
 [sub_resource type="ButtonGroup" id=7]
 
 [sub_resource type="ButtonGroup" id=20]
@@ -55,6 +57,8 @@ default_font = ExtResource( 4 )
 [sub_resource type="ButtonGroup" id=26]
 
 [sub_resource type="ButtonGroup" id=27]
+
+[sub_resource type="ButtonGroup" id=32]
 
 [sub_resource type="ButtonGroup" id=28]
 
@@ -103,7 +107,7 @@ rect_min_size = Vector2( 2048, 900 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer"]
 margin_right = 2036.0
-margin_bottom = 4391.0
+margin_bottom = 4811.0
 rect_min_size = Vector2( 0, 100 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -839,10 +843,113 @@ toggle_mode = true
 group = SubResource( 6 )
 text = "7"
 
-[node name="Q8" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+[node name="Q21" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
 margin_top = 1691.0
 margin_right = 2036.0
 margin_bottom = 1871.0
+rect_min_size = Vector2( 0, 180 )
+rect_pivot_offset = Vector2( -407, -238 )
+
+[node name="Label" type="Label" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q21"]
+margin_right = 2036.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+theme = SubResource( 2 )
+custom_fonts/font = SubResource( 14 )
+text = "8. This is an attention check, please select '1'"
+
+[node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q21"]
+margin_top = 64.0
+margin_right = 2036.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q21"]
+margin_top = 88.0
+margin_right = 2036.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 60 )
+
+[node name="Button" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q21/HBoxContainer"]
+margin_right = 250.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 0 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 15 )
+toggle_mode = true
+group = SubResource( 31 )
+text = "1"
+
+[node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q21/HBoxContainer"]
+margin_left = 254.0
+margin_right = 504.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 0 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 15 )
+toggle_mode = true
+group = SubResource( 31 )
+text = "2"
+
+[node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q21/HBoxContainer"]
+margin_left = 508.0
+margin_right = 758.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 0 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 15 )
+toggle_mode = true
+group = SubResource( 31 )
+text = "3"
+
+[node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q21/HBoxContainer"]
+margin_left = 762.0
+margin_right = 1012.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 0 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 15 )
+toggle_mode = true
+group = SubResource( 31 )
+text = "4"
+
+[node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q21/HBoxContainer"]
+margin_left = 1016.0
+margin_right = 1266.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 0 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 15 )
+toggle_mode = true
+group = SubResource( 31 )
+text = "5"
+
+[node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q21/HBoxContainer"]
+margin_left = 1270.0
+margin_right = 1520.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 0 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 15 )
+toggle_mode = true
+group = SubResource( 31 )
+text = "6"
+
+[node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q21/HBoxContainer"]
+margin_left = 1524.0
+margin_right = 1774.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 0 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 15 )
+toggle_mode = true
+group = SubResource( 31 )
+text = "7"
+
+[node name="Q8" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+margin_top = 1901.0
+margin_right = 2036.0
+margin_bottom = 2081.0
 rect_min_size = Vector2( 0, 180 )
 rect_pivot_offset = Vector2( -407, -238 )
 
@@ -852,7 +959,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "8. Robots scare me"
+text = "9. Robots scare me"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q8"]
 margin_top = 64.0
@@ -943,9 +1050,9 @@ group = SubResource( 7 )
 text = "7"
 
 [node name="Q9" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
-margin_top = 1901.0
+margin_top = 2111.0
 margin_right = 2036.0
-margin_bottom = 2081.0
+margin_bottom = 2291.0
 rect_min_size = Vector2( 0, 180 )
 rect_pivot_offset = Vector2( -407, -238 )
 
@@ -955,7 +1062,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "9. I would feel very nervous just being around a robot"
+text = "10. I would feel very nervous just being around a robot"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q9"]
 margin_top = 64.0
@@ -1046,9 +1153,9 @@ group = SubResource( 20 )
 text = "7"
 
 [node name="Q10" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
-margin_top = 2111.0
+margin_top = 2321.0
 margin_right = 2036.0
-margin_bottom = 2291.0
+margin_bottom = 2501.0
 rect_min_size = Vector2( 0, 180 )
 rect_pivot_offset = Vector2( -407, -238 )
 
@@ -1058,7 +1165,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "10. I don’t want a robot to touch me"
+text = "11. I don’t want a robot to touch me"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q10"]
 margin_top = 64.0
@@ -1149,9 +1256,9 @@ group = SubResource( 9 )
 text = "7"
 
 [node name="Q11" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
-margin_top = 2321.0
+margin_top = 2531.0
 margin_right = 2036.0
-margin_bottom = 2501.0
+margin_bottom = 2711.0
 rect_min_size = Vector2( 0, 180 )
 rect_pivot_offset = Vector2( -407, -238 )
 
@@ -1161,7 +1268,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "11. Robots are necessary because they can do jobs that are too hard or too dangerous for people"
+text = "12. Robots are necessary because they can do jobs that are too hard or too dangerous for people"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q11"]
 margin_top = 64.0
@@ -1252,9 +1359,9 @@ group = SubResource( 21 )
 text = "7"
 
 [node name="Q12" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
-margin_top = 2531.0
+margin_top = 2741.0
 margin_right = 2036.0
-margin_bottom = 2711.0
+margin_bottom = 2921.0
 rect_min_size = Vector2( 0, 180 )
 rect_pivot_offset = Vector2( -407, -238 )
 
@@ -1264,7 +1371,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "12. Robots can make life easier"
+text = "13. Robots can make life easier"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q12"]
 margin_top = 64.0
@@ -1355,9 +1462,9 @@ group = SubResource( 22 )
 text = "7"
 
 [node name="Q13" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
-margin_top = 2741.0
+margin_top = 2951.0
 margin_right = 2036.0
-margin_bottom = 2921.0
+margin_bottom = 3131.0
 rect_min_size = Vector2( 0, 180 )
 rect_pivot_offset = Vector2( -407, -238 )
 
@@ -1367,7 +1474,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "13. Assigning routine tasks to robots lets people do more meaningful tasks"
+text = "14. Assigning routine tasks to robots lets people do more meaningful tasks"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q13"]
 margin_top = 64.0
@@ -1458,9 +1565,9 @@ group = SubResource( 23 )
 text = "7"
 
 [node name="Q14" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
-margin_top = 2951.0
+margin_top = 3161.0
 margin_right = 2036.0
-margin_bottom = 3131.0
+margin_bottom = 3341.0
 rect_min_size = Vector2( 0, 180 )
 rect_pivot_offset = Vector2( -407, -238 )
 
@@ -1470,7 +1577,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "14. Dangerous tasks should primarily be given to robots"
+text = "15. Dangerous tasks should primarily be given to robots"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q14"]
 margin_top = 64.0
@@ -1561,9 +1668,9 @@ group = SubResource( 24 )
 text = "7"
 
 [node name="Q15" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
-margin_top = 3161.0
+margin_top = 3371.0
 margin_right = 2036.0
-margin_bottom = 3341.0
+margin_bottom = 3551.0
 rect_min_size = Vector2( 0, 180 )
 rect_pivot_offset = Vector2( -407, -238 )
 
@@ -1573,7 +1680,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "15. Robots are a good thing for society, because they help people"
+text = "16. Robots are a good thing for society, because they help people"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q15"]
 margin_top = 64.0
@@ -1664,9 +1771,9 @@ group = SubResource( 25 )
 text = "7"
 
 [node name="Q16" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
-margin_top = 3371.0
+margin_top = 3581.0
 margin_right = 2036.0
-margin_bottom = 3551.0
+margin_bottom = 3761.0
 rect_min_size = Vector2( 0, 180 )
 rect_pivot_offset = Vector2( -407, -238 )
 
@@ -1676,7 +1783,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "16. Robots may make us even lazier"
+text = "17. Robots may make us even lazier"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q16"]
 margin_top = 64.0
@@ -1767,9 +1874,9 @@ group = SubResource( 26 )
 text = "7"
 
 [node name="Q17" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
-margin_top = 3581.0
+margin_top = 3791.0
 margin_right = 2036.0
-margin_bottom = 3761.0
+margin_bottom = 3971.0
 rect_min_size = Vector2( 0, 180 )
 rect_pivot_offset = Vector2( -407, -238 )
 
@@ -1779,7 +1886,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "17. Widespread use of robots is going to take away jobs from people"
+text = "18. Widespread use of robots is going to take away jobs from people"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q17"]
 margin_top = 64.0
@@ -1869,10 +1976,113 @@ toggle_mode = true
 group = SubResource( 27 )
 text = "7"
 
-[node name="Q18" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
-margin_top = 3791.0
+[node name="Q22" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+margin_top = 4001.0
 margin_right = 2036.0
-margin_bottom = 3971.0
+margin_bottom = 4181.0
+rect_min_size = Vector2( 0, 180 )
+rect_pivot_offset = Vector2( -407, -238 )
+
+[node name="Label" type="Label" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q22"]
+margin_right = 2036.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+theme = SubResource( 2 )
+custom_fonts/font = SubResource( 14 )
+text = "19. This is an attention check. Please select '7'"
+
+[node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q22"]
+margin_top = 64.0
+margin_right = 2036.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q22"]
+margin_top = 88.0
+margin_right = 2036.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 0, 60 )
+
+[node name="Button" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q22/HBoxContainer"]
+margin_right = 250.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 0 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 15 )
+toggle_mode = true
+group = SubResource( 32 )
+text = "1"
+
+[node name="Button2" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q22/HBoxContainer"]
+margin_left = 254.0
+margin_right = 504.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 0 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 15 )
+toggle_mode = true
+group = SubResource( 32 )
+text = "2"
+
+[node name="Button3" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q22/HBoxContainer"]
+margin_left = 508.0
+margin_right = 758.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 0 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 15 )
+toggle_mode = true
+group = SubResource( 32 )
+text = "3"
+
+[node name="Button4" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q22/HBoxContainer"]
+margin_left = 762.0
+margin_right = 1012.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 0 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 15 )
+toggle_mode = true
+group = SubResource( 32 )
+text = "4"
+
+[node name="Button5" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q22/HBoxContainer"]
+margin_left = 1016.0
+margin_right = 1266.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 0 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 15 )
+toggle_mode = true
+group = SubResource( 32 )
+text = "5"
+
+[node name="Button6" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q22/HBoxContainer"]
+margin_left = 1270.0
+margin_right = 1520.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 0 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 15 )
+toggle_mode = true
+group = SubResource( 32 )
+text = "6"
+
+[node name="Button7" type="Button" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q22/HBoxContainer"]
+margin_left = 1524.0
+margin_right = 1774.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 0 )
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 15 )
+toggle_mode = true
+group = SubResource( 32 )
+text = "7"
+
+[node name="Q18" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
+margin_top = 4211.0
+margin_right = 2036.0
+margin_bottom = 4391.0
 rect_min_size = Vector2( 0, 180 )
 rect_pivot_offset = Vector2( -407, -238 )
 
@@ -1882,7 +2092,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "18. I am afraid that robots will encourage less interaction between humans"
+text = "20. I am afraid that robots will encourage less interaction between humans"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q18"]
 margin_top = 64.0
@@ -1973,9 +2183,9 @@ group = SubResource( 28 )
 text = "7"
 
 [node name="Q19" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
-margin_top = 4001.0
+margin_top = 4421.0
 margin_right = 2036.0
-margin_bottom = 4181.0
+margin_bottom = 4601.0
 rect_min_size = Vector2( 0, 180 )
 rect_pivot_offset = Vector2( -407, -238 )
 
@@ -1985,7 +2195,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "19. Robotics is one of the areas of technology that needs to be closely monitored"
+text = "21. Robotics is one of the areas of technology that needs to be closely monitored"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q19"]
 margin_top = 64.0
@@ -2076,9 +2286,9 @@ group = SubResource( 29 )
 text = "7"
 
 [node name="Q20" type="VBoxContainer" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer"]
-margin_top = 4211.0
+margin_top = 4631.0
 margin_right = 2036.0
-margin_bottom = 4391.0
+margin_bottom = 4811.0
 rect_min_size = Vector2( 0, 180 )
 rect_pivot_offset = Vector2( -407, -238 )
 
@@ -2088,7 +2298,7 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 14 )
-text = "20. Unregulated use of robotics can lead to societal upheavals"
+text = "22. Unregulated use of robotics can lead to societal upheavals"
 
 [node name="Control" type="Control" parent="ColorRect/Questionnaire/ScrollContainer/VBoxContainer/Q20"]
 margin_top = 64.0
