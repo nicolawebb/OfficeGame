@@ -202,6 +202,7 @@ margin_bottom = 100.0
 rect_min_size = Vector2( 300, 100 )
 custom_fonts/font = SubResource( 33 )
 align = 1
+max_length = 24
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
 margin_top = 104.0
@@ -216,17 +217,35 @@ rect_min_size = Vector2( 500, 0 )
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/HBoxContainer3"]
 margin_left = 504.0
-margin_right = 1452.0
+margin_right = 1204.0
 margin_bottom = 100.0
-rect_min_size = Vector2( 948, 0 )
+rect_min_size = Vector2( 700, 0 )
 
 [node name="Age_warning" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer3/CenterContainer"]
-margin_right = 948.0
+margin_right = 700.0
 margin_bottom = 100.0
-rect_min_size = Vector2( 948, 100 )
+rect_min_size = Vector2( 700, 100 )
+rect_pivot_offset = Vector2( 549, 100 )
 custom_colors/font_color = Color( 1, 0.121569, 0.121569, 1 )
 custom_fonts/font = SubResource( 16 )
 text = "Please enter a number between 10 to 80"
+align = 1
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer/HBoxContainer3"]
+visible = false
+margin_left = 1208.0
+margin_right = 1908.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 700, 0 )
+
+[node name="Prolific_warning" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer3/CenterContainer2"]
+margin_right = 700.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 700, 100 )
+rect_pivot_offset = Vector2( 549, 100 )
+custom_colors/font_color = Color( 1, 0.121569, 0.121569, 1 )
+custom_fonts/font = SubResource( 16 )
+text = "Please enter a valid prolific ID"
 align = 1
 
 [node name="Q1" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
@@ -331,5 +350,6 @@ stream = ExtResource( 8 )
 volume_db = -15.0
 
 [connection signal="text_entered" from="CenterContainer/VBoxContainer/HBoxContainer2/Age" to="." method="_on_Age_text_entered"]
+[connection signal="focus_exited" from="CenterContainer/VBoxContainer/HBoxContainer2/prolificid" to="." method="_on_prolificid_focus_exited"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Continue/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Continue/Button2" to="." method="_on_Button2_pressed"]

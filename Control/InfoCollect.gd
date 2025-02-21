@@ -40,6 +40,7 @@ func _ready():
 
 var text_data_list = []
 func _on_continue():
+
 	var file = File.new()
 	print("erfger")
 #	if Ledit1.text == '' or Ledit2.text == '':
@@ -71,6 +72,7 @@ func _on_option_button_item_selected(index, button_name):
 	check_all_questions_answered()
 	
 func check_all_questions_answered():
+
 	var answered1 = true
 #	if Ledit1.text == "" or Ledit2.text == "" or Ledit3.text == "":
 	if Ledit3.text == "":
@@ -90,6 +92,8 @@ func check_all_questions_answered():
 	else:
 		continue_button.disabled = true
 		continue_button.modulate = Color(0.5, 0.5, 0.5)
+		
+
 
 
 func get_current_time() -> String:
@@ -135,6 +139,15 @@ func _on_Button_pressed():
 	
 	visible = false
 
+func validate():
+	var id = $CenterContainer/VBoxContainer/HBoxContainer2/prolificid.text
+	if id.length() != 24:
+		$CenterContainer/VBoxContainer/HBoxContainer3/CenterContainer2.visible = true
+		return false
+	
+	$CenterContainer/VBoxContainer/HBoxContainer3/CenterContainer2.visible = false
+	return true
+	
 
 func _on_Button2_pressed():
 	var file = File.new()
@@ -160,3 +173,8 @@ func _on_Button2_pressed():
 	emit_signal("export_file_path", file_path)
 	
 	visible = false
+
+
+func _on_prolificid_focus_exited():
+	validate()
+	
