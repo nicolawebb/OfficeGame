@@ -228,7 +228,7 @@ rect_min_size = Vector2( 700, 100 )
 rect_pivot_offset = Vector2( 549, 100 )
 custom_colors/font_color = Color( 1, 0.121569, 0.121569, 1 )
 custom_fonts/font = SubResource( 16 )
-text = "Please enter a number between 10 to 80"
+text = "Please enter a number between 18 to 80"
 align = 1
 
 [node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer/HBoxContainer3"]
@@ -339,6 +339,19 @@ margin_bottom = 60.0
 custom_fonts/font = SubResource( 39 )
 text = "Continue"
 
+[node name="complete_form" type="Label" parent="."]
+visible = false
+margin_left = 666.0
+margin_top = 899.0
+margin_right = 1366.0
+margin_bottom = 999.0
+rect_min_size = Vector2( 700, 100 )
+rect_pivot_offset = Vector2( 549, 100 )
+custom_colors/font_color = Color( 1, 0.121569, 0.121569, 1 )
+custom_fonts/font = SubResource( 16 )
+text = "Please fill out all fields"
+align = 1
+
 [node name="Tween" type="Tween" parent="."]
 
 [node name="continue_audio" type="AudioStreamPlayer" parent="."]
@@ -349,7 +362,7 @@ volume_db = -5.0
 stream = ExtResource( 8 )
 volume_db = -15.0
 
-[connection signal="text_entered" from="CenterContainer/VBoxContainer/HBoxContainer2/Age" to="." method="_on_Age_text_entered"]
+[connection signal="focus_exited" from="CenterContainer/VBoxContainer/HBoxContainer2/Age" to="." method="_on_Age_focus_exited"]
 [connection signal="focus_exited" from="CenterContainer/VBoxContainer/HBoxContainer2/prolificid" to="." method="_on_prolificid_focus_exited"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Continue/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Continue/Button2" to="." method="_on_Button2_pressed"]

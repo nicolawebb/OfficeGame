@@ -105,13 +105,24 @@ func get_current_time() -> String:
 	return day + hour + minute + second
 
 
-func _on_Age_text_entered(new_text):
-	if new_text.to_int() >= 80 or new_text.to_int() <= 10:
-		new_text == ''
+func _on_Age_text_entered():
+	var age = $CenterContainer/VBoxContainer/HBoxContainer2/Age.text
+	if age.to_int() >= 80 or age.to_int() <= 10:
+		age == ''
 		Age_warning.visible = true
-		yield(get_tree().create_timer(2.0), "timeout")
-		Age_warning.visible = false
+		return false
+	
+	Age_warning.visible = false
+	return true
 
+func validate():
+	var id = $CenterContainer/VBoxContainer/HBoxContainer2/prolificid.text
+	if id.length() != 24:
+		$CenterContainer/VBoxContainer/HBoxContainer3/CenterContainer2.visible = true
+		return false
+	
+	$CenterContainer/VBoxContainer/HBoxContainer3/CenterContainer2.visible = false
+	return true
 
 func _on_Button_pressed(): 	
 	var file = File.new()
@@ -139,42 +150,50 @@ func _on_Button_pressed():
 	
 	visible = false
 
-func validate():
-	var id = $CenterContainer/VBoxContainer/HBoxContainer2/prolificid.text
-	if id.length() != 24:
-		$CenterContainer/VBoxContainer/HBoxContainer3/CenterContainer2.visible = true
-		return false
-	
-	$CenterContainer/VBoxContainer/HBoxContainer3/CenterContainer2.visible = false
-	return true
 	
 
 func _on_Button2_pressed():
-	var file = File.new()
-#	if Ledit1.text == '' or Ledit2.text == '':
-#		player_name = 'Anonymous'
-#	else:
-#		player_name = Ledit1.text + " " + Ledit2.text
 	
-	var text_data = prolific_id.text  + "," + Obutton1.get_item_text(Obutton1.selected) + "," + Ledit3.text + "," + Obutton2.get_item_text(Obutton2.selected) + "," + Obutton3.get_item_text(Obutton3.selected) + "\n"
+	#validate
+	var gender = $CenterContainer/VBoxContainer/HBoxContainer2/Gender.selected
+	var q1 = $CenterContainer/VBoxContainer/Q1/Know.selected
+	var q2 = $CenterContainer/VBoxContainer/Q2/Know2.selected
+	var prolific_id = $CenterContainer/VBoxContainer/HBoxContainer2/prolificid.text
+	var age = $CenterContainer/VBoxContainer/HBoxContainer2/Age.text
 	
-	# Append text_data to the list
-	text_data_list.append(text_data)
+	if prolific_id.strip_edges() == "" or age.strip_edges() == "" or gender == 0 or q1 == 0 or q2 == 0:
+		continue_button.disabled = true
+		$complete_form.visible = true
 	
-	# Emit signal with the updated list
-	emit_signal("infocollected", text_data_list)
-	
-	continue_button_audio.play()
-	
-	$Tween.remove_all()
-	$Tween.interpolate_property(self, "modulate:a", null, 0.0, 0.5, Tween.TRANS_QUART, Tween.EASE_IN)
-	$Tween.start()
-	yield($Tween, "tween_all_completed")
-	emit_signal("export_file_path", file_path)
-	
-	visible = false
+	else:
+		
+		$complete_form.visible = false
+		continue_button.disabled = false
+		
+		var text_data = prolific_id  + "," + Obutton1.get_item_text(Obutton1.selected) + "," + Ledit3.text + "," + Obutton2.get_item_text(Obutton2.selected) + "," + Obutton3.get_item_text(Obutton3.selected) + "\n"
+		
+		# Append text_data to the list
+		text_data_list.append(text_data)
+		
+		# Emit signal with the updated list
+		emit_signal("infocollected", text_data_list)
+		print(text_data_list)
+		
+		continue_button_audio.play()
+		
+		$Tween.remove_all()
+		$Tween.interpolate_property(self, "modulate:a", null, 0.0, 0.5, Tween.TRANS_QUART, Tween.EASE_IN)
+		$Tween.start()
+		yield($Tween, "tween_all_completed")
+		emit_signal("export_file_path", file_path)
+		
+		visible = false
 
 
 func _on_prolificid_focus_exited():
 	validate()
 	
+
+
+func _on_Age_focus_exited():
+	_on_Age_text_entered()
